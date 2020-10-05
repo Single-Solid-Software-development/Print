@@ -1,0 +1,156 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container{
+    max-width: 14.8cm;
+    margin: 0 auto;
+
+    background-size: 100%;
+    min-height: 21cm;
+}
+input{
+    background: transparent;
+    border: none;
+    outline : 1px solid red;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+}
+.period-dates{
+    padding: 5.25cm 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 0.32cm;
+    padding-right: 1.35cm;
+    margin-bottom: .1cm;
+}
+.period-dates .period-from{
+    margin-left: 0.85cm;
+} 
+.period-dates input{
+    height: 0.33cm;
+}
+.period-dates input.day{
+    width: 0.6cm;
+}
+.period-dates input.month{
+    width: 2.1cm;
+}
+.period-dates input.year{
+    width: 0.6cm;
+}
+
+.period-dates .period-from .month{
+    margin-right: 0.4cm;
+}
+.period-dates .period-from .day{
+    margin-right: .1cm;
+}
+.period-dates .period-to .month{
+    margin-right: .15cm;
+}
+.period-dates .period-to .day{
+    margin-right: 0.1cm;
+}
+.period-dates .period-to{
+    margin-right: 0.9cm;
+}
+
+.full-width{
+    width: calc(100% - 2.2cm);
+    margin: 0 1.1cm;
+}
+.insurance-firm{
+    margin-bottom: .25cm;
+}
+.insurance-object{
+    margin-bottom: .5cm;
+}
+.subject-phone {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.9cm;
+}
+.subject-phone input{
+    width: 9.1cm;
+    margin-right: 1.2cm;
+    letter-spacing: 0.65cm;
+    line-height: 1;
+}
+.transport-info{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0.9cm;
+    margin-bottom: .3cm;
+}
+.transport-info .mark{
+    width: 2.7cm;
+    margin-right: 0.3cm;
+}
+.transport-info .issue-year{
+    width: 1.3cm;
+    margin-right: 0.3cm;
+}
+.transport-info .generator-number{
+    width: 2cm;
+    margin-right: 0.3cm;
+}
+.transport-info .carcase-number{
+    width: 2.4cm;
+    margin-right: 0.25cm;
+}
+.transport-info .governtment-number{
+    width: 2.5cm;
+}
+.subject-profession,.transport-users{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1.2cm;
+    margin-bottom: .35cm;
+}
+.subject-profession input,.transport-users input{
+    width: 7.2cm;
+}
+.transport-users{
+    margin-bottom: 1.65cm;
+    
+}
+.users-can-drive{
+    padding-left: 2cm;
+}
+.users-can-drive input{
+    height: .25cm;
+}
+.users-can-drive .user-item{
+    display: flex;
+    margin-bottom: .2cm;
+}
+.users-can-drive .user-item .fio{
+    display: flex;
+    flex-direction: column;
+    margin-right: 1.9cm;
+}
+.user-item .driver-info {
+    padding-top: .35cm;
+}
+.users-can-drive .user-item .driver-info{
+    display: flex;
+}
+.user-item .driver-info .serial{
+    width: .4cm;
+    margin-right: .5cm;
+}
+.user-item .driver-info .number{
+    width: 1.3cm;
+    margin-right: .3cm;
+}
+.user-item .relationship{
+    padding-top: .22cm;
+}
+.user-item .relationship input{
+    width: 2.8cm;
+}
