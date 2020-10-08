@@ -1,4 +1,7 @@
-body{
+@page {
+margin:0cm;
+}
+html,body{
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
@@ -7,17 +10,19 @@ body{
 .container{
     max-width: 14.8cm;
     margin: 0 auto;
-
+    background-image: url(images/bg.jpg);
     background-size: 100%;
     min-height: 21cm;
+    max-height: 21cm;
 }
 input{
     background: transparent;
     border: none;
-    outline : 1px solid red;
+    outline : 1px solid white;
     font-size: 12px;
     font-weight: 500;
     line-height: 1;
+    font-family: 'Times New Roman', Times, serif;
 }
 .period-dates{
     padding: 5.25cm 0 0 0;
@@ -30,7 +35,7 @@ input{
 }
 .period-dates .period-from{
     margin-left: 0.85cm;
-} 
+}
 .period-dates input{
     height: 0.33cm;
 }
@@ -45,16 +50,16 @@ input{
 }
 
 .period-dates .period-from .month{
-    margin-right: 0.4cm;
+    margin-right: 0.5cm;
 }
 .period-dates .period-from .day{
-    margin-right: .1cm;
+    margin-right: .2cm;
 }
 .period-dates .period-to .month{
-    margin-right: .15cm;
+    margin-right: .2cm;
 }
 .period-dates .period-to .day{
-    margin-right: 0.1cm;
+    margin-right: 0.25cm;
 }
 .period-dates .period-to{
     margin-right: 0.9cm;
@@ -68,7 +73,7 @@ input{
     margin-bottom: .25cm;
 }
 .insurance-object{
-    margin-bottom: .5cm;
+    margin-bottom: .44cm;
 }
 .subject-phone {
     display: flex;
@@ -76,8 +81,8 @@ input{
     margin-bottom: 1.9cm;
 }
 .subject-phone input{
-    width: 9.1cm;
-    margin-right: 1.2cm;
+    width: 10.1cm;
+    margin-right: 0.25cm;
     letter-spacing: 0.65cm;
     line-height: 1;
 }
@@ -89,19 +94,19 @@ input{
 }
 .transport-info .mark{
     width: 2.7cm;
-    margin-right: 0.3cm;
+    margin-right: 0.4cm;
 }
 .transport-info .issue-year{
     width: 1.3cm;
-    margin-right: 0.3cm;
+    margin-right: 0.35cm;
 }
 .transport-info .generator-number{
     width: 2cm;
-    margin-right: 0.3cm;
+    margin-right: 0.4cm;
 }
 .transport-info .carcase-number{
     width: 2.4cm;
-    margin-right: 0.25cm;
+    margin-right: 0.35cm;
 }
 .transport-info .governtment-number{
     width: 2.5cm;
@@ -110,14 +115,14 @@ input{
     display: flex;
     justify-content: flex-end;
     padding-right: 1.2cm;
-    margin-bottom: .35cm;
+    margin-bottom: .38cm;
 }
 .subject-profession input,.transport-users input{
     width: 7.2cm;
 }
 .transport-users{
-    margin-bottom: 1.65cm;
-    
+    margin-bottom: 1.58cm;
+
 }
 .users-can-drive{
     padding-left: 2cm;
@@ -132,7 +137,7 @@ input{
 .users-can-drive .user-item .fio{
     display: flex;
     flex-direction: column;
-    margin-right: 1.9cm;
+    margin-right: 1.75cm;
 }
 .user-item .driver-info {
     padding-top: .35cm;
@@ -141,12 +146,12 @@ input{
     display: flex;
 }
 .user-item .driver-info .serial{
-    width: .4cm;
+    width: .5cm;
     margin-right: .5cm;
 }
 .user-item .driver-info .number{
     width: 1.3cm;
-    margin-right: .3cm;
+    margin-right: .4cm;
 }
 .user-item .relationship{
     padding-top: .22cm;

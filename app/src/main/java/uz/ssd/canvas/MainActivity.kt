@@ -7,11 +7,10 @@ import android.graphics.Paint
 import android.graphics.pdf.PdfDocument
 import android.os.Bundle
 import android.os.Environment
-import android.print.PdfPrint
-import android.print.PrintAttributes
+import android.print.*
 import android.print.PrintAttributes.Resolution
-import android.print.PrintJob
-import android.print.PrintManager
+import android.print.PrintDocumentInfo.*
+import android.print.pdf.PrintedPdfDocument
 import android.webkit.WebChromeClient
 import android.webkit.WebSettings
 import android.webkit.WebView
@@ -46,41 +45,31 @@ class MainActivity : AppCompatActivity() {
         }
 
         val DESKTOP_USER_AGENT =
-            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36"
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.2049.0 Safari/537.36"
         val MOBILE_USER_AGENT =
             "Mozilla/5.0 (Linux; U; Android 4.4; en-us; Nexus 4 Build/JOP24G) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"
 
-        //Choose Mobile/Desktop client.
         val settings: WebSettings = webView.settings
         settings.userAgentString = DESKTOP_USER_AGENT
 
-        webView.settings.javaScriptEnabled = true
-        webView.settings.loadWithOverviewMode = true
-        webView.settings.useWideViewPort = true
+//        webView.settings.javaScriptEnabled = true
+//        webView.settings.loadWithOverviewMode = true
+//        webView.settings.useWideViewPort = true
 
-        webView.webChromeClient = WebChromeClient()
-        webView.webViewClient = WebViewClient()
-        webView.settings.setSupportZoom(true)
-        webView.settings.textZoom = 1
+//        webView.webChromeClient = WebChromeClient()
+//        webView.webViewClient = WebViewClient()
+//        webView.settings.setSupportZoom(true)
+//        webView.settings.textZoom = 1
 
-        webView.settings.builtInZoomControls = true
-        webView.settings.displayZoomControls = false
+//        webView.settings.builtInZoomControls = true
+//        webView.settings.displayZoomControls = false
 
-        webView.scrollBarStyle = WebView.SCROLLBARS_OUTSIDE_OVERLAY
-        webView.isScrollbarFadingEnabled = false
-        webView.settings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK
-//
-        val inputStream: InputStream = assets.open("index.html")
-        val size: Int = inputStream.available()
+//        webView.scrollBarStyle = WebView.SCROLLBARS_OUTSIDE_OVERLAY
+//        webView.isScrollbarFadingEnabled = false
+//        webView.settings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK
 
-        val buffer = ByteArray(size)
+        val day = "2020"
 
-        inputStream.read(buffer)
-        inputStream.close()
-        val day = 10
-//        var htmlString = String(buffer)
-
-//        webView.loadDataWithBaseURL("file:///android_asset/", htmlData, "text/html", "UTF-8", null)
         val htmlString = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,65 +84,107 @@ class MainActivity : AppCompatActivity() {
             <div class="container">
                 <div class="period-dates">
                     <div class="period-from">
-                        <input type="text" name="from-day" class="day" value="$day">
-                        <input type="text" name="from-month" class="month" value="$day">
-                        <input type="text" name="from-year" class="year">
+                        <input type="text" name="from-day" class="day" value="31">
+                        <input type="text" name="from-month" class="month" value="Oktabr">
+                        <input type="text" name="from-year" class="year" value="20">
                     </div>
                     <div class="period-to">
-                        <input type="text" name="to-day" class="day">
-                        <input type="text" name="to-month" class="month">
-                        <input type="text" name="to-year" class="year">
+                        <input type="text" name="to-day" class="day" value="12">
+                        <input type="text" name="to-month" class="month" value="Decabr">
+                        <input type="text" name="to-year" class="year" value="21">
                     </div>
                 </div>
                 <div class="insurance-firm">
-                    <input type="text" name="insurance-subject" class="full-width">
+                    <input type="text" name="insurance-subject" class="full-width" value="Travel Insurance">
                 </div>
                 <div class="insurance-object">
-                    <input type="text" name="insurance-object" class="full-width">
+                    <input type="text" name="insurance-object" class="full-width" value="Maxmudov Shoxrubek Muzaffar o`g`li">
                 </div>
                 <div class="subject-phone" >
-                    <input type="tel" name="subject-phone" maxlength="12">
+                    <input type="tel" name="subject-phone" maxlength="12" value="998998578086">
                 </div>
                 <div class="transport-info">
-                    <input type="text" name="mark_and_model" class="mark">
-                    <input type="text" name="issue-year" class="issue-year">
-                    <input type="text" name="generator-number" class="generator-number">
-                    <input type="text" name="carcase-number" class="carcase-number">
-                    <input type="text" name="government-number" class="governtment-number">
+                    <input type="text" name="mark_and_model" class="mark" value="YAKT">
+                    <input type="text" name="issue-year" class="issue-year" value="2025">
+                    <input type="text" name="generator-number" class="generator-number" value="45454654465465">
+                    <input type="text" name="carcase-number" class="carcase-number" value="Spark">
+                    <input type="text" name="government-number" class="governtment-number" value="AAA1234658">
                 </div>
                 <div class="subject-profession" >
-                    <input type="text" name="subject-profession">
+                    <input type="text" name="subject-profession" value="Programist">
                 </div>
                 <div class="transport-users">
-                    <input type="text" name="transport-users">
+                    <input type="text" name="transport-users" value="5 Yil experience">
                 </div>
                 <div class="users-can-drive">
                     <div class="user-item">
                         <div class="fio">
-                            <input type="text" name="user[0][first-name]">
-                            <input type="text" name="user[0][last-name]">
-                            <input type="text" name="user[0][third-name]">   
+                            <input type="text" name="user[0][first-name]" value="Shoxruxbek">
+                            <input type="text" name="user[0][last-name]" value="Maxmudov">
+                            <input type="text" name="user[0][third-name]" value="Muzaffar o`g`li">   
                         </div>
                         <div class="driver-info">
-                            <input type="text" name="user[0][serial]" class="serial">
-                            <input type="text" name="user[0][number]" class="number">
+                            <input type="text" name="user[0][serial]" class="serial" value="AB">
+                            <input type="text" name="user[0][number]" class="number" value="1234567">
                         </div>
                         <div class="relationship">
-                            <input type="text" name="user[0][relationship]">
+                            <input type="text" name="user[0][relationship]" value="O`g`il">
                         </div>
                     </div>
                     <div class="user-item">
                         <div class="fio">
-                            <input type="text" name="user[1][first-name]">
-                            <input type="text" name="user[1][last-name]">
-                            <input type="text" name="user[1][third-name]">   
+                            <input type="text" name="user[1][first-name]" value="$day">
+                            <input type="text" name="user[1][last-name]" value="$day">
+                            <input type="text" name="user[1][third-name]" value="$day">   
                         </div>
                         <div class="driver-info">
-                            <input type="text" name="user[1][serial]" class="serial">
-                            <input type="text" name="user[1][number]" class="number">
+                            <input type="text" name="user[1][serial]" class="serial" value="$day">
+                            <input type="text" name="user[1][number]" class="number" value="$day">
                         </div>
                         <div class="relationship">
-                            <input type="text" name="user[1][relationship]">
+                            <input type="text" name="user[1][relationship]" value="$day">
+                        </div>
+                    </div>
+                    <div class="user-item">
+                        <div class="fio">
+                            <input type="text" name="user[2][first-name]" value="$day">
+                            <input type="text" name="user[2][last-name]" value="$day">
+                            <input type="text" name="user[2][third-name]" value="$day">   
+                        </div>
+                        <div class="driver-info">
+                            <input type="text" name="user[2][serial]" class="serial" value="$day">
+                            <input type="text" name="user[2][number]" class="number" value="$day">
+                        </div>
+                        <div class="relationship">
+                            <input type="text" name="user[2][relationship]" value="$day">
+                        </div>
+                    </div>
+                    <div class="user-item">
+                        <div class="fio">
+                            <input type="text" name="user[3][first-name]" value="$day">
+                            <input type="text" name="user[3][last-name]" value="$day">
+                            <input type="text" name="user[3][third-name]" value="$day">   
+                        </div>
+                        <div class="driver-info">
+                            <input type="text" name="user[3][serial]" class="serial" value="$day">
+                            <input type="text" name="user[3][number]" class="number" value="$day">
+                        </div>
+                        <div class="relationship">
+                            <input type="text" name="user[3][relationship]" value="$day">
+                        </div>
+                    </div>
+                    <div class="user-item">
+                        <div class="fio">
+                            <input type="text" name="user[4][first-name]" value="$day">
+                            <input type="text" name="user[4][last-name]" value="$day">
+                            <input type="text" name="user[3][third-name]" value="$day">   
+                        </div>
+                        <div class="driver-info">
+                            <input type="text" name="user[3][serial]" class="serial" value="$day">
+                            <input type="text" name="user[3][number]" class="number" value="$day">
+                        </div>
+                        <div class="relationship">
+                            <input type="text" name="user[3][relationship]" value="$day">
                         </div>
                     </div>
                 </div>
@@ -162,15 +193,37 @@ class MainActivity : AppCompatActivity() {
     </div>
 </body>
 </html>"""
-        val htmlData =
-            "<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\" />" + htmlString
-        webView.loadDataWithBaseURL("file:///android_asset/style.css", htmlString, "text/html", "UTF-8", null)
-//        webView.loadData(htmlData, "text/html; charset=utf-8", null)
+
+        webView.loadDataWithBaseURL(
+            "file:///android_asset/style.css",
+            htmlString,
+            "text/html",
+            "UTF-8",
+            null
+        )
+
         btn.setOnClickListener {
             createWebPagePrint(webView)
-//            createWebPrintJob(webView)
         }
-//        File(Environment.getExternalStorageState(), "fileName")
+    }
+
+    fun createWebPagePrint(webView: WebView) {
+        val printManager = getSystemService(Context.PRINT_SERVICE) as PrintManager
+        val jobName = getString(R.string.app_name) + " Document"
+        val printAdapter = webView.createPrintDocumentAdapter(jobName)
+        val builder = PrintAttributes.Builder()
+        builder.setMediaSize(PrintAttributes.MediaSize.ISO_A5)
+        builder.setColorMode(PrintAttributes.COLOR_MODE_MONOCHROME)
+        builder.setMinMargins(PrintAttributes.Margins.NO_MARGINS)
+//        builder.setResolution(Resolution("zooey", PRINT_SERVICE, 600, 600))
+
+        val printJob: PrintJob = printManager.print(jobName, printAdapter, builder.build())
+        if (printJob.isCompleted) {
+            Toast.makeText(applicationContext, "print_complete", Toast.LENGTH_LONG)
+                .show()
+        } else if (printJob.isFailed) {
+            Toast.makeText(applicationContext, "print_failed", Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun createWebPrintJob(webView: WebView) {
@@ -189,28 +242,9 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
-    fun createWebPagePrint(webView: WebView) {
-        /*if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT)
-            return;*/
-        val printManager = getSystemService(Context.PRINT_SERVICE) as PrintManager
-        val printAdapter = webView.createPrintDocumentAdapter()
-        val jobName = getString(R.string.app_name) + " Document"
-        val builder = PrintAttributes.Builder()
-        builder.setMediaSize(PrintAttributes.MediaSize.ISO_A5)
-        val printJob: PrintJob = printManager.print(jobName, printAdapter, builder.build())
-        if (printJob.isCompleted) {
-            Toast.makeText(applicationContext, "print_complete", Toast.LENGTH_LONG)
-                .show()
-        } else if (printJob.isFailed) {
-            Toast.makeText(applicationContext, "print_failed", Toast.LENGTH_LONG).show()
-        }
-        // Save the job object for later status checking
-    }
-
     fun create() {
         val pdf = PdfDocument()
         val paint = Paint()
-
 
         val pageInfo = PdfDocument.PageInfo.Builder(418, 598, 1).create()
         val page1 = pdf.startPage(pageInfo)
@@ -219,7 +253,6 @@ class MainActivity : AppCompatActivity() {
         paint.textSize = 7f
         canvas.drawText("Hello", 36.72f, 62f, paint)
         pdf.finishPage(page1)
-
 
         val file = File(Environment.getExternalStorageDirectory().absolutePath, "/Hello.pdf")
 
