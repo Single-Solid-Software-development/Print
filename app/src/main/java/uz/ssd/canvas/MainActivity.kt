@@ -7,207 +7,45 @@ import android.graphics.Paint
 import android.graphics.pdf.PdfDocument
 import android.os.Bundle
 import android.os.Environment
-import android.print.*
-import android.print.PrintAttributes.Resolution
-import android.print.PrintDocumentInfo.*
-import android.print.pdf.PrintedPdfDocument
-import android.webkit.WebChromeClient
+import android.print.PrintAttributes
+import android.print.PrintJob
+import android.print.PrintManager
+import android.util.Log
 import android.webkit.WebSettings
 import android.webkit.WebView
-import android.webkit.WebViewClient
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import uz.ssd.canvas.Html.DESKTOP_USER_AGENT
+import uz.ssd.canvas.Html.htmlCss
+import uz.ssd.canvas.Html.htmlString
+import uz.ssd.canvas.util.DownloadIntegrator
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
-import java.io.InputStream
 
 
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if (ActivityCompat.checkSelfPermission(
-                this,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE
-            ) == PackageManager.PERMISSION_GRANTED
-        ) {
-            create()
-        } else {
-            ActivityCompat.requestPermissions(
-                this,
-                arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
-                PackageManager.PERMISSION_GRANTED
-            )
-        }
-
-        val DESKTOP_USER_AGENT =
-            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.2049.0 Safari/537.36"
-        val MOBILE_USER_AGENT =
-            "Mozilla/5.0 (Linux; U; Android 4.4; en-us; Nexus 4 Build/JOP24G) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"
-
+        askRequest()
         val settings: WebSettings = webView.settings
         settings.userAgentString = DESKTOP_USER_AGENT
+        settingConfigure()
 
-//        webView.settings.javaScriptEnabled = true
-//        webView.settings.loadWithOverviewMode = true
-//        webView.settings.useWideViewPort = true
+        btn.setOnClickListener { createWebPagePrint(webView) }
+        btn2.setOnClickListener { download() }
 
-//        webView.webChromeClient = WebChromeClient()
-//        webView.webViewClient = WebViewClient()
-//        webView.settings.setSupportZoom(true)
-//        webView.settings.textZoom = 1
-
-//        webView.settings.builtInZoomControls = true
-//        webView.settings.displayZoomControls = false
-
-//        webView.scrollBarStyle = WebView.SCROLLBARS_OUTSIDE_OVERLAY
-//        webView.isScrollbarFadingEnabled = false
-//        webView.settings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK
-
-        val day = "2020"
-
-        val htmlString = """<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Pdf to Html</title>
-</head>
-<body>
-    <div class="wrapper">
-        <form action="">
-            <div class="container">
-                <div class="period-dates">
-                    <div class="period-from">
-                        <input type="text" name="from-day" class="day" value="31">
-                        <input type="text" name="from-month" class="month" value="Oktabr">
-                        <input type="text" name="from-year" class="year" value="20">
-                    </div>
-                    <div class="period-to">
-                        <input type="text" name="to-day" class="day" value="12">
-                        <input type="text" name="to-month" class="month" value="Decabr">
-                        <input type="text" name="to-year" class="year" value="21">
-                    </div>
-                </div>
-                <div class="insurance-firm">
-                    <input type="text" name="insurance-subject" class="full-width" value="Travel Insurance">
-                </div>
-                <div class="insurance-object">
-                    <input type="text" name="insurance-object" class="full-width" value="Maxmudov Shoxrubek Muzaffar o`g`li">
-                </div>
-                <div class="subject-phone" >
-                    <input type="tel" name="subject-phone" maxlength="12" value="998998578086">
-                </div>
-                <div class="transport-info">
-                    <input type="text" name="mark_and_model" class="mark" value="YAKT">
-                    <input type="text" name="issue-year" class="issue-year" value="2025">
-                    <input type="text" name="generator-number" class="generator-number" value="45454654465465">
-                    <input type="text" name="carcase-number" class="carcase-number" value="Spark">
-                    <input type="text" name="government-number" class="governtment-number" value="AAA1234658">
-                </div>
-                <div class="subject-profession" >
-                    <input type="text" name="subject-profession" value="Programist">
-                </div>
-                <div class="transport-users">
-                    <input type="text" name="transport-users" value="5 Yil experience">
-                </div>
-                <div class="users-can-drive">
-                    <div class="user-item">
-                        <div class="fio">
-                            <input type="text" name="user[0][first-name]" value="Shoxruxbek">
-                            <input type="text" name="user[0][last-name]" value="Maxmudov">
-                            <input type="text" name="user[0][third-name]" value="Muzaffar o`g`li">   
-                        </div>
-                        <div class="driver-info">
-                            <input type="text" name="user[0][serial]" class="serial" value="AB">
-                            <input type="text" name="user[0][number]" class="number" value="1234567">
-                        </div>
-                        <div class="relationship">
-                            <input type="text" name="user[0][relationship]" value="O`g`il">
-                        </div>
-                    </div>
-                    <div class="user-item">
-                        <div class="fio">
-                            <input type="text" name="user[1][first-name]" value="$day">
-                            <input type="text" name="user[1][last-name]" value="$day">
-                            <input type="text" name="user[1][third-name]" value="$day">   
-                        </div>
-                        <div class="driver-info">
-                            <input type="text" name="user[1][serial]" class="serial" value="$day">
-                            <input type="text" name="user[1][number]" class="number" value="$day">
-                        </div>
-                        <div class="relationship">
-                            <input type="text" name="user[1][relationship]" value="$day">
-                        </div>
-                    </div>
-                    <div class="user-item">
-                        <div class="fio">
-                            <input type="text" name="user[2][first-name]" value="$day">
-                            <input type="text" name="user[2][last-name]" value="$day">
-                            <input type="text" name="user[2][third-name]" value="$day">   
-                        </div>
-                        <div class="driver-info">
-                            <input type="text" name="user[2][serial]" class="serial" value="$day">
-                            <input type="text" name="user[2][number]" class="number" value="$day">
-                        </div>
-                        <div class="relationship">
-                            <input type="text" name="user[2][relationship]" value="$day">
-                        </div>
-                    </div>
-                    <div class="user-item">
-                        <div class="fio">
-                            <input type="text" name="user[3][first-name]" value="$day">
-                            <input type="text" name="user[3][last-name]" value="$day">
-                            <input type="text" name="user[3][third-name]" value="$day">   
-                        </div>
-                        <div class="driver-info">
-                            <input type="text" name="user[3][serial]" class="serial" value="$day">
-                            <input type="text" name="user[3][number]" class="number" value="$day">
-                        </div>
-                        <div class="relationship">
-                            <input type="text" name="user[3][relationship]" value="$day">
-                        </div>
-                    </div>
-                    <div class="user-item">
-                        <div class="fio">
-                            <input type="text" name="user[4][first-name]" value="$day">
-                            <input type="text" name="user[4][last-name]" value="$day">
-                            <input type="text" name="user[3][third-name]" value="$day">   
-                        </div>
-                        <div class="driver-info">
-                            <input type="text" name="user[3][serial]" class="serial" value="$day">
-                            <input type="text" name="user[3][number]" class="number" value="$day">
-                        </div>
-                        <div class="relationship">
-                            <input type="text" name="user[3][relationship]" value="$day">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-</body>
-</html>"""
-
-        webView.loadDataWithBaseURL(
-            "file:///android_asset/style.css",
-            htmlString,
-            "text/html",
-            "UTF-8",
-            null
-        )
-
-        btn.setOnClickListener {
-            createWebPagePrint(webView)
-        }
     }
 
-    fun createWebPagePrint(webView: WebView) {
+    private fun createWebPagePrint(webView: WebView) {
         val printManager = getSystemService(Context.PRINT_SERVICE) as PrintManager
         val jobName = getString(R.string.app_name) + " Document"
         val printAdapter = webView.createPrintDocumentAdapter(jobName)
@@ -215,34 +53,59 @@ class MainActivity : AppCompatActivity() {
         builder.setMediaSize(PrintAttributes.MediaSize.ISO_A5)
         builder.setColorMode(PrintAttributes.COLOR_MODE_MONOCHROME)
         builder.setMinMargins(PrintAttributes.Margins.NO_MARGINS)
-//        builder.setResolution(Resolution("zooey", PRINT_SERVICE, 600, 600))
+//        builder.setResolution(Resolution("zoom", PRINT_SERVICE, 600, 600))
 
         val printJob: PrintJob = printManager.print(jobName, printAdapter, builder.build())
-        if (printJob.isCompleted) {
-            Toast.makeText(applicationContext, "print_complete", Toast.LENGTH_LONG)
-                .show()
-        } else if (printJob.isFailed) {
-            Toast.makeText(applicationContext, "print_failed", Toast.LENGTH_LONG).show()
-        }
+        if (printJob.isCompleted) showMessage("print_complete")
+        else if (printJob.isFailed) showMessage("print_failed")
     }
 
-    private fun createWebPrintJob(webView: WebView) {
-        val jobName = getString(R.string.app_name) + " Document"
-        val attributes = PrintAttributes.Builder()
-            .setMediaSize(PrintAttributes.MediaSize.ISO_A5)
-            .setResolution(Resolution("pdf", "pdf", 600, 600))
-            .setMinMargins(PrintAttributes.Margins.NO_MARGINS).build()
-        val path =
-            Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM + "/PDFTest/")
-        val pdfPrint = PdfPrint(attributes)
-        pdfPrint.print(
-            webView.createPrintDocumentAdapter(jobName),
-            path,
-            "output_" + System.currentTimeMillis() + ".pdf"
+
+    private fun download() {
+        GlobalScope.launch {
+            val json = DownloadIntegrator(applicationContext).readCategory()
+            Log.d("$$$$", json)
+        }
+
+        webView.loadDataWithBaseURL(
+            htmlCss, htmlString, "text/html", "UTF-8", null
         )
     }
 
-    fun create() {
+    private fun askRequest() {
+        if (ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE
+            ) == PackageManager.PERMISSION_GRANTED
+        ) create()
+        else ActivityCompat.requestPermissions(
+            this,
+            arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
+            PackageManager.PERMISSION_GRANTED
+        )
+    }
+
+    private fun settingConfigure() {
+        /*  webView.settings.javaScriptEnabled = true
+            webView.settings.loadWithOverviewMode = true
+            webView.settings.useWideViewPort = true
+
+            webView.webChromeClient = WebChromeClient()
+            webView.webViewClient = WebViewClient()
+            webView.settings.setSupportZoom(true)
+            webView.settings.textZoom = 1
+
+            webView.settings.builtInZoomControls = true
+            webView.settings.displayZoomControls = false
+
+            webView.scrollBarStyle = WebView.SCROLLBARS_OUTSIDE_OVERLAY
+            webView.isScrollbarFadingEnabled = false
+            webView.settings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK
+
+            webView.loadUrl("https://github.com/mr-shoxruxbek/TestCss/blob/main/pdf2html_1310/index.html")*/
+    }
+
+    private fun create() {
         val pdf = PdfDocument()
         val paint = Paint()
 
@@ -256,18 +119,20 @@ class MainActivity : AppCompatActivity() {
 
         val file = File(Environment.getExternalStorageDirectory().absolutePath, "/Hello.pdf")
 
-//        folder.mkdirs()
-//
-//        val file = File(folder, "Hello.pdf")
-//        if (file.exists ()) file.delete ()
-//        file.createNewFile()
+        /*folder.mkdirs()
+
+        val file = File(folder, "Hello.pdf")
+        if (file.exists ()) file.delete ()
+        file.createNewFile()*/
         try {
             pdf.writeTo(FileOutputStream(file))
         } catch (e: IOException) {
             e.printStackTrace()
         }
-        Toast.makeText(this, "DONE", Toast.LENGTH_SHORT).show()
+        showMessage("DONE")
         pdf.close()
     }
 
+    private fun showMessage(message: String) =
+        Toast.makeText(applicationContext, message, Toast.LENGTH_LONG).show()
 }

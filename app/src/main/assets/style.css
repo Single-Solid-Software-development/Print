@@ -6,8 +6,6 @@ html,body{
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
-    height: 210mm;
-    width: 148.5mm;
 }
 
 .container{
@@ -28,137 +26,142 @@ input{
     font-family: 'Times New Roman', Times, serif;
 }
 .period-dates{
-    padding: 5.25cm 0 0 0;
+    padding: 35.4% 0 0 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-left: 0.32cm;
-    padding-right: 1.35cm;
-    margin-bottom: .1cm;
 }
 .period-dates .period-from{
-    margin-left: 0.85cm;
+    margin-left: 8%;
+    flex: 0 0 42%;
+    margin-bottom: 0.8%;
 }
 .period-dates input{
     height: 0.33cm;
 }
 .period-dates input.day{
-    width: 0.6cm;
+    width: 9%;
 }
 .period-dates input.month{
-    width: 2.1cm;
+    width: 37%;
 }
 .period-dates input.year{
-    width: 0.6cm;
+    width: 9%;
 }
 
 .period-dates .period-from .month{
-    margin-right: 0.5cm;
+    margin-right: 8%;
 }
 .period-dates .period-from .day{
-    margin-right: .2cm;
+    margin-right: 2%;
 }
 .period-dates .period-to .month{
-    margin-right: .2cm;
+    margin-right: 4%;
 }
 .period-dates .period-to .day{
-    margin-right: 0.25cm;
+    margin-right: 2%;
 }
 .period-dates .period-to{
-    margin-right: 0.9cm;
+    margin-right: 1%;
+    flex: 0 0 42%;
 }
 
 .full-width{
-    width: calc(100% - 2.2cm);
-    margin: 0 1.1cm;
+    width: 84%;
+    margin: 0 7.8%;
 }
 .insurance-firm{
-    margin-bottom: .25cm;
+    margin-bottom: 1.5%;
 }
 .insurance-object{
-    margin-bottom: .44cm;
+    margin-bottom: 3%;
 }
 .subject-phone {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 1.9cm;
+    margin-bottom: 12.5%;
 }
 .subject-phone input{
-    width: 10.1cm;
-    margin-right: 0.25cm;
+    width: 68%;
+    margin-right: 2.5%;
     letter-spacing: 0.65cm;
     line-height: 1;
 }
 .transport-info{
     display: flex;
     flex-wrap: wrap;
-    padding-left: 0.9cm;
-    margin-bottom: .3cm;
+    padding-left: 6.5%;
+    margin-bottom: 2%;
 }
 .transport-info .mark{
-    width: 2.7cm;
-    margin-right: 0.4cm;
+    width: 19%;
+    margin-right: 2.6%;
 }
 .transport-info .issue-year{
-    width: 1.3cm;
-    margin-right: 0.35cm;
+    width: 9%;
+    margin-right: 3.4%;
 }
 .transport-info .generator-number{
-    width: 2cm;
-    margin-right: 0.4cm;
+    width: 14.6%;
+    margin-right: 3%;
 }
 .transport-info .carcase-number{
-    width: 2.4cm;
-    margin-right: 0.35cm;
+    width: 17%;
+    margin-right: 3%;
 }
 .transport-info .governtment-number{
-    width: 2.5cm;
+    width: 18%;
 }
 .subject-profession,.transport-users{
     display: flex;
     justify-content: flex-end;
-    padding-right: 1.2cm;
-    margin-bottom: .38cm;
+    padding-right: 8%;
+    margin-bottom: 3%;
 }
 .subject-profession input,.transport-users input{
-    width: 7.2cm;
+    width: 53%;
 }
 .transport-users{
-    margin-bottom: 1.58cm;
-
+    margin-bottom: 11%;
 }
 .users-can-drive{
-    padding-left: 2cm;
+    padding-left: 13%;
 }
 .users-can-drive input{
     height: .25cm;
 }
 .users-can-drive .user-item{
     display: flex;
-    margin-bottom: .2cm;
+    margin-bottom: 1.6%;
 }
 .users-can-drive .user-item .fio{
     display: flex;
     flex-direction: column;
-    margin-right: 1.75cm;
+    margin-right: 15%;
 }
 .user-item .driver-info {
-    padding-top: .35cm;
+    padding-top: 3%;
+    width: 20%;
+}
+.user-item .driver-info input{
+    height: 30%;
 }
 .users-can-drive .user-item .driver-info{
     display: flex;
+    margin-right: 2%;
 }
 .user-item .driver-info .serial{
-    width: .5cm;
-    margin-right: .5cm;
+    width: 20%;
+    margin-right: 18%;
 }
 .user-item .driver-info .number{
-    width: 1.3cm;
-    margin-right: .4cm;
+    width: 47%;
+    margin-right: 1%;
 }
 .user-item .relationship{
-    padding-top: .22cm;
+    padding-top: 1.6%;
 }
 .user-item .relationship input{
-    width: 2.8cm;
+    width: 65%;
+    height: 27%;
 }

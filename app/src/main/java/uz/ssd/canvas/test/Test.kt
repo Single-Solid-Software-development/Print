@@ -1,4 +1,4 @@
-package uz.ssd.canvas
+package uz.ssd.canvas.test
 
 /**
  * Created by mr-shoxruxbek on 30/09/2020.
