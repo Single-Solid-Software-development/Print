@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun createWebPagePrint(webView: WebView) {
         val printManager = getSystemService(Context.PRINT_SERVICE) as PrintManager
-        val jobName = getString(R.string.app_name) + " Document"
+        val jobName = "Canvas print Document"
         val printAdapter = webView.createPrintDocumentAdapter(jobName)
         val builder = PrintAttributes.Builder()
         builder.setMediaSize(PrintAttributes.MediaSize.ISO_A5)
@@ -55,12 +55,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun askRequest() {
-        if (ActivityCompat.checkSelfPermission(
-                this,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE
-            ) == PackageManager.PERMISSION_GRANTED
-        ) {
-        } else ActivityCompat.requestPermissions(
+        ActivityCompat.requestPermissions(
             this,
             arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
             PackageManager.PERMISSION_GRANTED
