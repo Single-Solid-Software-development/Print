@@ -8,8 +8,6 @@ object Html {
     const val htmlCss = "http://project.webforte.uz/pdf2html/style.css"
     const val DESKTOP_USER_AGENT =
         "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.2049.0 Safari/537.36"
-    const val MOBILE_USER_AGENT =
-        "Mozilla/5.0 (Linux; U; Android 4.4; en-us; Nexus 4 Build/JOP24G) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"
     const val day = "6365030"
     const val htmlString = """<!DOCTYPE html>
 <html lang="en">
