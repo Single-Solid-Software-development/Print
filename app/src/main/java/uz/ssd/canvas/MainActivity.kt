@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         btn.setOnClickListener { createWebPagePrint(webView) }
         btn2.setOnClickListener { download() }
 
+        showMessage(android.os.Build.VERSION.SDK + android.os.Build.DEVICE + android.os.Build.MODEL + android.os.Build.PRODUCT)
     }
 
     private fun createWebPagePrint(webView: WebView) {
