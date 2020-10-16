@@ -1,13 +1,13 @@
 package uz.ssd.canvas
 
 import android.os.Bundle
+import android.util.Base64
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.encript.*
-import uz.ssd.canvas.AesCbcWithIntegrity.SecretKeys
 import java.io.UnsupportedEncodingException
+import java.lang.StringBuilder
 import java.security.GeneralSecurityException
-import kotlin.random.Random.Default.Companion
 
 class MainActivity1 : AppCompatActivity() {
 
@@ -15,35 +15,58 @@ class MainActivity1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.encript)
 
+
+        var key = if (PASSWORD_BASED_KEY) { //example for password based keys
+            val salt = AesCbcWithIntegrity.saltString(AesCbcWithIntegrity.generateSalt())
+            //If you generated the key from a password, you can store the salt and not the key.
+            AesCbcWithIntegrity.generateKeyFromPassword(EXAMPLE_PASSWORD, salt)
+        } else {
+            AesCbcWithIntegrity.generateKey()
+            //Note: If you are generating a random key, you'll probably be storing it somewhere
+        }
+        val keyStr = AesCbcWithIntegrity.keyString(key)
+
+        key = AesCbcWithIntegrity.keys(keyStr)
+        val maps = Prefs(this).mapToken
+        val civ = AesCbcWithIntegrity.encrypt(etText.text.toString(), key)
+
+        maps[etText.text.toString()] = civ
+        Prefs(this).mapToken = maps
+
+        val value = maps[etText.text.toString()]
+        if (value != null) {
+            val decryptedText = AesCbcWithIntegrity.decryptString(value, key)
+            etText2.setText(decryptedText)
+        } else etText2.setText("NUll")
+
         try {
-            var key: SecretKeys?
-            key = if (PASSWORD_BASED_KEY) { //example for password based keys
-                val salt = AesCbcWithIntegrity.saltString(AesCbcWithIntegrity.generateSalt())
-                //If you generated the key from a password, you can store the salt and not the key.
-                log("Salt: $salt", 0)
-                AesCbcWithIntegrity.generateKeyFromPassword(EXAMPLE_PASSWORD, salt)
-            } else {
-                AesCbcWithIntegrity.generateKey()
-                //Note: If you are generating a random key, you'll probably be storing it somewhere
+            btn.setOnClickListener {
+                val etText = etText.text.toString()
+                val s = StringBuilder()
+                etText.reversed().forEach {
+                    s.append(it)
+                    s.append(etText.random())
+                }
+                val bytes = Base64.encode(s.toString().toByteArray(), Base64.DEFAULT)
+                val bytes2 = Base64.encode(bytes, Base64.DEFAULT)
+                etText2.setText(String(bytes2))
             }
 
-            // The encryption / storage & display:
-            val keyStr = AesCbcWithIntegrity.keyString(key)
-            key = null //Pretend to throw that away so we can demonstrate converting it from str
-            val textToEncrypt =
-                "Testing shows the presence, not the absence of bugs.\n\n  Edsger W. Dijkstra"
-            log("Before encryption: $textToEncrypt", 0)
+            btn2.setOnClickListener {
+                val text = etText2.text.toString()
+                val bytes2 = String(Base64.decode(text.toByteArray(), Base64.DEFAULT))
+                val bytes = String(Base64.decode(bytes2, Base64.DEFAULT))
+                val build = StringBuilder()
+                for (x in bytes.indices) {
+                    if (x % 2 == 0)
+                        build.append(bytes[x])
+                }
 
-            // Read from storage & decrypt
-            key =
-                AesCbcWithIntegrity.keys(keyStr) // alternately, regenerate the key from password/salt.
-            val civ = AesCbcWithIntegrity.encrypt(textToEncrypt, key)
-            log("Encrypted: $civ", 0)
-            val decryptedText = AesCbcWithIntegrity.decryptString(civ, key)
-            log("Decrypted: $decryptedText", 0)
-            //Note: "String.equals" is not a constant-time check, which can sometimes be problematic.
-            log("Do they equal: " + (textToEncrypt == decryptedText), 0)
-            etText.setText(decryptedText)
+
+                etText.setText(build.reverse().toString())
+            }
+
+
         } catch (e: GeneralSecurityException) {
             log("GeneralSecurityException", e)
         } catch (e: UnsupportedEncodingException) {
@@ -60,6 +83,7 @@ class MainActivity1 : AppCompatActivity() {
     companion object {
         const val TAG = "TestApp"
         private const val PASSWORD_BASED_KEY = true
-        private const val EXAMPLE_PASSWORD = "always use passphrases for passwords wherever possible!"
+        private const val EXAMPLE_PASSWORD =
+            "always use passphrases for passwords wherever possible!"
     }
 }
