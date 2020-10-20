@@ -21,111 +21,154 @@ object Html {
     <div class="wrapper">
         <form action="">
             <div class="container">
-                <div class="period-dates">
-                    <div class="period-from">
-                        <input type="text" name="from-day" class="day" value="31">
-                        <input type="text" name="from-month" class="month" value="Oktabr">
-                        <input type="text" name="from-year" class="year" value="20">
-                    </div>
-                    <div class="period-to">
-                        <input type="text" name="to-day" class="day" value="12">
-                        <input type="text" name="to-month" class="month" value="Decabr">
-                        <input type="text" name="to-year" class="year" value="21">
-                    </div>
-                </div>
-                <div class="insurance-firm">
-                    <input type="text" name="insurance-subject" class="full-width" value="Travel Insurance">
-                </div>
-                <div class="insurance-object">
-                    <input type="text" name="insurance-object" class="full-width" value="Maxmudov Shoxrubek Muzaffar o`g`li">
-                </div>
-                <div class="subject-phone" >
-                    <input type="tel" name="subject-phone" maxlength="12" value="998998578086">
-                </div>
-                <div class="transport-info">
-                    <input type="text" name="mark_and_model" class="mark" value="YAKT">
-                    <input type="text" name="issue-year" class="issue-year" value="2025">
-                    <input type="text" name="generator-number" class="generator-number" value="45454654465465">
-                    <input type="text" name="carcase-number" class="carcase-number" value="Spark">
-                    <input type="text" name="government-number" class="governtment-number" value="AAA1234658">
-                </div>
-                <div class="subject-profession" >
-                    <input type="text" name="subject-profession" value="Programist">
-                </div>
-                <div class="transport-users">
-                    <input type="text" name="transport-users" value="5 Yil experience">
-                </div>
-                <div class="users-can-drive">
-                    <div class="user-item">
-                        <div class="fio">
-                            <input type="text" name="user[0][first-name]" value="Shoxruxbek">
-                            <input type="text" name="user[0][last-name]" value="Maxmudov">
-                            <input type="text" name="user[0][third-name]" value="Muzaffar o`g`li">   
-                        </div>
-                        <div class="driver-info">
-                            <input type="text" name="user[0][serial]" class="serial" value="AB">
-                            <input type="text" name="user[0][number]" class="number" value="1234567">
-                        </div>
-                        <div class="relationship">
-                            <input type="text" name="user[0][relationship]" value="O`g`il">
-                        </div>
-                    </div>
-                    <div class="user-item">
-                        <div class="fio">
-                            <input type="text" name="user[1][first-name]" value="$day">
-                            <input type="text" name="user[1][last-name]" value="$day">
-                            <input type="text" name="user[1][third-name]" value="$day">   
-                        </div>
-                        <div class="driver-info">
-                            <input type="text" name="user[1][serial]" class="serial" value="$day">
-                            <input type="text" name="user[1][number]" class="number" value="$day">
-                        </div>
-                        <div class="relationship">
-                            <input type="text" name="user[1][relationship]" value="$day">
-                        </div>
-                    </div>
-                    <div class="user-item">
-                        <div class="fio">
-                            <input type="text" name="user[2][first-name]" value="$day">
-                            <input type="text" name="user[2][last-name]" value="$day">
-                            <input type="text" name="user[2][third-name]" value="$day">   
-                        </div>
-                        <div class="driver-info">
-                            <input type="text" name="user[2][serial]" class="serial" value="$day">
-                            <input type="text" name="user[2][number]" class="number" value="$day">
-                        </div>
-                        <div class="relationship">
-                            <input type="text" name="user[2][relationship]" value="$day">
-                        </div>
-                    </div>
-                    <div class="user-item">
-                        <div class="fio">
-                            <input type="text" name="user[3][first-name]" value="$day">
-                            <input type="text" name="user[3][last-name]" value="$day">
-                            <input type="text" name="user[3][third-name]" value="$day">   
-                        </div>
-                        <div class="driver-info">
-                            <input type="text" name="user[3][serial]" class="serial" value="$day">
-                            <input type="text" name="user[3][number]" class="number" value="$day">
-                        </div>
-                        <div class="relationship">
-                            <input type="text" name="user[3][relationship]" value="$day">
-                        </div>
-                    </div>
-                    <div class="user-item">
-                        <div class="fio">
-                            <input type="text" name="user[4][first-name]" value="$day">
-                            <input type="text" name="user[4][last-name]" value="$day">
-                            <input type="text" name="user[3][third-name]" value="$day">   
-                        </div>
-                        <div class="driver-info">
-                            <input type="text" name="user[3][serial]" class="serial" value="$day">
-                            <input type="text" name="user[3][number]" class="number" value="$day">
-                        </div>
-                        <div class="relationship">
-                            <input type="text" name="user[3][relationship]" value="$day">
-                        </div>
-                    </div>
+                <div class="table-block">
+                    <table class="table">
+                        <tbody class="table-row date-period">
+                            <tr style="width: 40%">
+                                 <td><input type="text" name="period-from-day" value="19"></td>
+                                 <td><input type="text" name="period-from-month" value="Октабрь"></td>
+                                 <td><input type="text" name="period-from-year" value="20"></td>
+                            </tr>
+                            <tr style="width: 40%">
+                                 <td><input type="text" name="period-to-day" value="21"></td>
+                                 <td><input type="text" name="period-to-month" value="Декабр"></td>
+                                 <td><input type="text" name="period-to-year" value="23"></td>
+                            </tr>
+                        </tbody>
+                        <tbody class="table-row insurance-company">
+                            <tr>
+                                 <td><input type="text" name="company-full-name" value="Tashkent Investment pro company" maxlength="75"></td>
+                            </tr>
+                        </tbody>
+                        <tbody class="table-row insurance-client">
+                            <tr>
+                                 <td><input type="text" name="client-full-name" value="Роналдоев Криштиано Родриго угли" maxlength="80"></td>
+                            </tr>
+                        </tbody>
+                        <tbody class="table-row client-phone">
+                            <tr>
+                                 <td><input type="text" name="client-phone" value="998911631236" maxlength="12"></td>
+                            </tr>
+                        </tbody>
+
+                        <tbody class="table-row transport-information">
+                            <tr>
+                                 <td><input type="text" name="transport-model" value="GM / Nexia2"></td>
+                                 <td><input type="text" name="transport-year" value="2016"></td>
+                                 <td><input type="text" name="transport-number" value="01AAA777"></td>
+                                 <td><input type="text" name="kuzov-number" value="123456789"></td>
+                                 <td><input type="text" name="govern-number" value="01AAA777"></td>
+                             </tr>
+                           
+                        </tbody>
+                        <tbody class="table-row client-sector">
+                            <tr>
+                                 <td><input type="text" name="transport-model" value="Дастурий таъминотлар ишлаб чикариш"></td>
+                             </tr>
+                           
+                        </tbody>
+                        <tbody class="table-row transport-used-teritory">
+                            <tr>
+                                 <td><input type="text" name="transport-model" value="Тошкент шахри"></td>
+                             </tr>
+                        </tbody>                        
+                        <tbody class="table-row transport-can-use item-1">
+                            <tr>
+                                <td>
+                                    <input type="text" name="can-use-first-name" value="Роналдоев">
+                                    <input type="text" name="can-use-last-name" value="Криштиано">
+                                    <input type="text" name="can-use-third-name" value="Родриго угли">
+                                </td>
+                                <td>
+                                    <input type="text" name="can-use-serial" value="AA" maxlength="3">
+                                    <input type="text" name="can-use-number" maxlength="8" value="5635624">
+                                </td>
+                                <td>
+                                    <input type="text" name="can-use-serial" value="Futbolist">
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody class="table-row transport-can-use item-2">
+                            <tr>
+                                <td>
+                                    <input type="text" name="can-use-first-name" value="Роналдоев">
+                                    <input type="text" name="can-use-last-name" value="Криштиано">
+                                    <input type="text" name="can-use-third-name" value="Родриго угли">
+                                </td>
+                                <td>
+                                    <input type="text" name="can-use-serial" value="AA" maxlength="3">
+                                    <input type="text" name="can-use-number" maxlength="8" value="5635624">
+                                </td>
+                                <td>
+                                    <input type="text" name="can-use-serial" value="Futbolist">
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody class="table-row transport-can-use item-3">
+                            <tr>
+                                <td>
+                                    <input type="text" name="can-use-first-name" value="Роналдоев">
+                                    <input type="text" name="can-use-last-name" value="Криштиано">
+                                    <input type="text" name="can-use-third-name" value="Родриго угли">
+                                </td>
+                                <td>
+                                    <input type="text" name="can-use-serial" value="AA" maxlength="3">
+                                    <input type="text" name="can-use-number" maxlength="8" value="5635624">
+                                </td>
+                                <td>
+                                    <input type="text" name="can-use-serial" value="Futbolist">
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody class="table-row transport-can-use item-4">
+                            <tr>
+                                <td>
+                                    <input type="text" name="can-use-first-name" value="Роналдоев">
+                                    <input type="text" name="can-use-last-name" value="Криштиано">
+                                    <input type="text" name="can-use-third-name" value="Родриго угли">
+                                </td>
+                                <td>
+                                    <input type="text" name="can-use-serial" value="AA" maxlength="3">
+                                    <input type="text" name="can-use-number" maxlength="8" value="5635624">
+                                </td>
+                                <td>
+                                    <input type="text" name="can-use-serial" value="Futbolist">
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody class="table-row transport-can-use item-5">
+                            <tr>
+                                <td>
+                                    <input type="text" name="can-use-first-name" value="Роналдоев">
+                                    <input type="text" name="can-use-last-name" value="Криштиано">
+                                    <input type="text" name="can-use-third-name" value="Родриго угли">
+                                </td>
+                                <td>
+                                    <input type="text" name="can-use-serial" value="AA" maxlength="3">
+                                    <input type="text" name="can-use-number" maxlength="8" value="5635624">
+                                </td>
+                                <td>
+                                    <input type="text" name="can-use-serial" value="Futbolist">
+                                </td>
+                            </tr>
+                        </tbody>
+                        <!-- <tbody class="table-row transport-can-use item">
+                            <tr>
+                                <td>
+                                    <input type="text" name="can-use-first-name" value="Тошкент шахри">
+                                    <input type="text" name="can-use-last-name" value="Тошкент шахри">
+                                    <input type="text" name="can-use-third-name" value="Тошкент шахри">
+                                </td>
+                                <td>
+                                    <input type="text" name="can-use-serial" value="Тошкент шахри">
+                                    <input type="text" name="can-use-number" value="Тошкент шахри">
+                                </td>
+                                <td>
+                                    <input type="text" name="can-use-relationship" value="Тошкент шахри">
+                                </td>
+                             </tr>
+                        </tbody> -->
+                    </table>
                 </div>
             </div>
         </form>
