@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         btn.setOnClickListener { createWebPagePrint(webView) }
         btn2.setOnClickListener { download() }
 
+        showMessage(android.os.Build.VERSION.SDK + android.os.Build.DEVICE + android.os.Build.MODEL + android.os.Build.PRODUCT)
     }
 
     private fun createWebPagePrint(webView: WebView) {
@@ -39,8 +40,7 @@ class MainActivity : AppCompatActivity() {
         builder.setColorMode(PrintAttributes.COLOR_MODE_MONOCHROME)
         builder.setMinMargins(PrintAttributes.Margins.NO_MARGINS)
 
-        val printJob: PrintJob =
-            printManager.print("Canvas print Document", printAdapter, builder.build())
+        val printJob: PrintJob = printManager.print("Canvas print Document", printAdapter, builder.build())
         if (printJob.isCompleted) showMessage("print_complete")
         else if (printJob.isFailed) showMessage("print_failed")
     }
