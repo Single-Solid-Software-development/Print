@@ -22,7 +22,7 @@ object Html {
         <form action="">
             <div class="container">
                 <div class="table-block">
-                    <table class="table">
+                    <table class="table insurcance-date">
                         <tbody class="table-row date-period">
                             <tr style="width: 40%">
                                  <td><input type="text" name="period-from-day" value="19"></td>
@@ -35,23 +35,31 @@ object Html {
                                  <td><input type="text" name="period-to-year" value="23"></td>
                             </tr>
                         </tbody>
-                        <tbody class="table-row insurance-company">
+                    </table>
+                    <table class="table insurance-company">
+                        <tbody class="table-row">
                             <tr>
                                  <td><input type="text" name="company-full-name" value="Tashkent Investment pro company" maxlength="75"></td>
                             </tr>
                         </tbody>
-                        <tbody class="table-row insurance-client">
+
+                    </table>
+                    <table class="table insurance-client">
+                        <tbody class="table-row">
                             <tr>
                                  <td><input type="text" name="client-full-name" value="Роналдоев Криштиано Родриго угли" maxlength="80"></td>
                             </tr>
                         </tbody>
-                        <tbody class="table-row client-phone">
+                    </table>
+                    <table class="table client-phone">
+                        <tbody class="table-row">
                             <tr>
                                  <td><input type="text" name="client-phone" value="998911631236" maxlength="12"></td>
                             </tr>
                         </tbody>
-
-                        <tbody class="table-row transport-information">
+                    </table>
+                    <table class="table transport-information">
+                        <tbody class="table-row">
                             <tr>
                                  <td><input type="text" name="transport-model" value="GM / Nexia2"></td>
                                  <td><input type="text" name="transport-year" value="2016"></td>
@@ -59,20 +67,25 @@ object Html {
                                  <td><input type="text" name="kuzov-number" value="123456789"></td>
                                  <td><input type="text" name="govern-number" value="01AAA777"></td>
                              </tr>
-                           
                         </tbody>
-                        <tbody class="table-row client-sector">
+                    </table>
+                    <table class="table client-sector">
+                        <tbody class="table-row">
                             <tr>
                                  <td><input type="text" name="transport-model" value="Дастурий таъминотлар ишлаб чикариш"></td>
                              </tr>
                            
                         </tbody>
-                        <tbody class="table-row transport-used-teritory">
+                    </table>
+                    <table class="table transport-used-teritory">
+                        <tbody class="table-row">
                             <tr>
                                  <td><input type="text" name="transport-model" value="Тошкент шахри"></td>
                              </tr>
-                        </tbody>                        
-                        <tbody class="table-row transport-can-use item-1">
+                        </tbody>
+                    </table>
+                    <table class="table transport-can-use item-1">         
+                        <tbody class="table-row">
                             <tr>
                                 <td>
                                     <input type="text" name="can-use-first-name" value="Роналдоев">
@@ -88,7 +101,9 @@ object Html {
                                 </td>
                             </tr>
                         </tbody>
-                        <tbody class="table-row transport-can-use item-2">
+                    </table>
+                    <table class="table transport-can-use item-2">
+                        <tbody class="table-row">
                             <tr>
                                 <td>
                                     <input type="text" name="can-use-first-name" value="Роналдоев">
@@ -104,7 +119,9 @@ object Html {
                                 </td>
                             </tr>
                         </tbody>
-                        <tbody class="table-row transport-can-use item-3">
+                    </table>
+                    <table class="table transport-can-use item-3">
+                        <tbody class="table-row">
                             <tr>
                                 <td>
                                     <input type="text" name="can-use-first-name" value="Роналдоев">
@@ -120,7 +137,9 @@ object Html {
                                 </td>
                             </tr>
                         </tbody>
-                        <tbody class="table-row transport-can-use item-4">
+                    </table>
+                    <table class="table transport-can-use item-4">
+                        <tbody class="table-row">
                             <tr>
                                 <td>
                                     <input type="text" name="can-use-first-name" value="Роналдоев">
@@ -136,7 +155,9 @@ object Html {
                                 </td>
                             </tr>
                         </tbody>
-                        <tbody class="table-row transport-can-use item-5">
+                    </table>
+                    <table class="table transport-can-use item-5">
+                        <tbody class="table-row">
                             <tr>
                                 <td>
                                     <input type="text" name="can-use-first-name" value="Роналдоев">
@@ -152,22 +173,6 @@ object Html {
                                 </td>
                             </tr>
                         </tbody>
-                        <!-- <tbody class="table-row transport-can-use item">
-                            <tr>
-                                <td>
-                                    <input type="text" name="can-use-first-name" value="Тошкент шахри">
-                                    <input type="text" name="can-use-last-name" value="Тошкент шахри">
-                                    <input type="text" name="can-use-third-name" value="Тошкент шахри">
-                                </td>
-                                <td>
-                                    <input type="text" name="can-use-serial" value="Тошкент шахри">
-                                    <input type="text" name="can-use-number" value="Тошкент шахри">
-                                </td>
-                                <td>
-                                    <input type="text" name="can-use-relationship" value="Тошкент шахри">
-                                </td>
-                             </tr>
-                        </tbody> -->
                     </table>
                 </div>
             </div>
