@@ -1,19 +1,9 @@
-package uz.ssd.canvas
-
-/**
- * Created by mr-shoxruxbek on 14/10/2020.
- */
-object Html {
-
-    const val htmlCss = "http://project.webforte.uz/pdf2html/style.css"
-    const val DESKTOP_USER_AGENT =
-        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.2049.0 Safari/537.36"
-    const val day = "6365030"
-    const val htmlString = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
     <title>Pdf to Html</title>
 </head>
@@ -178,7 +168,7 @@ object Html {
             </div>
         </form>
     </div>
-     <script src="html2pdf.bundle.js"></script>
+    <script src="html2pdf.bundle.js"></script>
     <script type="text/javascript">
     	window.onload = function(){
     		var now = new Date();
@@ -200,5 +190,4 @@ object Html {
     	}
     </script>
 </body>
-</html>"""
-}
+</html>

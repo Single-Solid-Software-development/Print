@@ -1,20 +1,27 @@
 package uz.ssd.canvas
 
 import android.content.Context
+import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.print.PrintAttributes
 import android.print.PrintJob
 import android.print.PrintManager
-import android.webkit.CookieManager
-import android.webkit.WebSettings
-import android.webkit.WebStorage
-import android.webkit.WebView
+import android.util.Log
+import android.webkit.*
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.browser.customtabs.CustomTabsIntent
 import kotlinx.android.synthetic.main.activity_main.*
 import uz.ssd.canvas.Html.DESKTOP_USER_AGENT
-import uz.ssd.canvas.Html.htmlCss
-import uz.ssd.canvas.Html.htmlString
+
+
+private class JSInterface {
+    @JavascriptInterface
+    fun getString(str: String?) {
+        Log.d("STRING", str ?: "Error")
+    }
+}
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,14 +29,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         val settings: WebSettings = webView.settings
         settings.userAgentString = DESKTOP_USER_AGENT
         settings.cacheMode = WebSettings.LOAD_NO_CACHE
+        settings.javaScriptEnabled = true
+//        webView.addJavascriptInterface(JSInterface(), "api")
 
         btn.setOnClickListener { createWebPagePrint(webView) }
         btn2.setOnClickListener { download() }
 
-        showMessage(android.os.Build.VERSION.SDK + android.os.Build.DEVICE + android.os.Build.MODEL + android.os.Build.PRODUCT)
+//        showMessage(android.os.Build.VERSION.SDK + android.os.Build.DEVICE + android.os.Build.MODEL + android.os.Build.PRODUCT)
     }
 
     private fun createWebPagePrint(webView: WebView) {
@@ -47,9 +57,47 @@ class MainActivity : AppCompatActivity() {
 
     private fun download() {
         clear()
-        webView.loadDataWithBaseURL(
-            htmlCss, htmlString, "text/html", "UTF-8", null
-        )
+        val CUSTOM_TAB_PACKAGE_NAME = "com.android.chrome";  // Change when in stable
+
+//        webView.loadUrl("http://project.webforte.uz/pdf2html/")
+//        webView.loadDataWithBaseURL(htmlCss, htmlString, "text/html", "UTF-8", null)
+//        webView.loadDataWithBaseURL(htmlCss, htmlString, "text/html", "UTF-8", null)
+
+        showMessage("Loading...)")
+        val url = "http://project.webforte.uz/pdf2html/"
+        val builder = CustomTabsIntent.Builder()
+        val customTabsIntent = builder.build()
+        val coolorInt: Int = Color.parseColor("#FF0000") //red
+        builder.setToolbarColor(coolorInt)
+
+//        builder.setActionButton(bitmap, "Android", pendingIntent, true);
+
+
+
+        customTabsIntent.launchUrl(this, Uri.parse(url))
+
+//        webView.webViewClient = object: WebViewClient(){
+//            override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
+//                view!!.loadUrl(htmlString)
+//                return true
+//            }
+//
+//
+//        }
+
+//        val downloadImageURL = webView.url
+
+//        if (URLUtil.isValidUrl(downloadImageURL)) {
+
+//            val request = DownloadManager.Request(Uri.parse(downloadImageURL))
+//            request.allowScanningByMediaScanner()
+
+//            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+//            val downloadManager = getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
+//            downloadManager.enqueue(request)
+//        } else {
+//            showMessage("agr_empty_error_description")
+//        }
     }
 
     private fun clear() {
