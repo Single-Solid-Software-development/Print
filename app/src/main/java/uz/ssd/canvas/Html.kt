@@ -18,115 +18,63 @@ object Html {
     <title>Pdf to Html</title>
 </head>
 <body>
-    <div class="wrapper">
+       <div class="wrapper page1">
         <form action="">
-            <div class="container">
-                <div class="period-dates">
-                    <div class="period-from">
-                        <input type="text" name="from-day" class="day" value="31">
-                        <input type="text" name="from-month" class="month" value="Oktabr">
-                        <input type="text" name="from-year" class="year" value="20">
-                    </div>
-                    <div class="period-to">
-                        <input type="text" name="to-day" class="day" value="12">
-                        <input type="text" name="to-month" class="month" value="Decabr">
-                        <input type="text" name="to-year" class="year" value="21">
-                    </div>
-                </div>
-                <div class="insurance-firm">
-                    <input type="text" name="insurance-subject" class="full-width" value="Travel Insurance">
-                </div>
-                <div class="insurance-object">
-                    <input type="text" name="insurance-object" class="full-width" value="Maxmudov Shoxrubek Muzaffar o`g`li">
-                </div>
-                <div class="subject-phone" >
-                    <input type="tel" name="subject-phone" maxlength="12" value="998998578086">
-                </div>
-                <div class="transport-info">
-                    <input type="text" name="mark_and_model" class="mark" value="YAKT">
-                    <input type="text" name="issue-year" class="issue-year" value="2025">
-                    <input type="text" name="generator-number" class="generator-number" value="45454654465465">
-                    <input type="text" name="carcase-number" class="carcase-number" value="Spark">
-                    <input type="text" name="government-number" class="governtment-number" value="AAA1234658">
-                </div>
-                <div class="subject-profession" >
-                    <input type="text" name="subject-profession" value="Programist">
-                </div>
-                <div class="transport-users">
-                    <input type="text" name="transport-users" value="5 Yil experience">
-                </div>
-                <div class="users-can-drive">
-                    <div class="user-item">
-                        <div class="fio">
-                            <input type="text" name="user[0][first-name]" value="Shoxruxbek">
-                            <input type="text" name="user[0][last-name]" value="Maxmudov">
-                            <input type="text" name="user[0][third-name]" value="Muzaffar o`g`li">   
-                        </div>
-                        <div class="driver-info">
-                            <input type="text" name="user[0][serial]" class="serial" value="AB">
-                            <input type="text" name="user[0][number]" class="number" value="1234567">
-                        </div>
-                        <div class="relationship">
-                            <input type="text" name="user[0][relationship]" value="O`g`il">
-                        </div>
-                    </div>
-                    <div class="user-item">
-                        <div class="fio">
-                            <input type="text" name="user[1][first-name]" value="$day">
-                            <input type="text" name="user[1][last-name]" value="$day">
-                            <input type="text" name="user[1][third-name]" value="$day">   
-                        </div>
-                        <div class="driver-info">
-                            <input type="text" name="user[1][serial]" class="serial" value="$day">
-                            <input type="text" name="user[1][number]" class="number" value="$day">
-                        </div>
-                        <div class="relationship">
-                            <input type="text" name="user[1][relationship]" value="$day">
-                        </div>
-                    </div>
-                    <div class="user-item">
-                        <div class="fio">
-                            <input type="text" name="user[2][first-name]" value="$day">
-                            <input type="text" name="user[2][last-name]" value="$day">
-                            <input type="text" name="user[2][third-name]" value="$day">   
-                        </div>
-                        <div class="driver-info">
-                            <input type="text" name="user[2][serial]" class="serial" value="$day">
-                            <input type="text" name="user[2][number]" class="number" value="$day">
-                        </div>
-                        <div class="relationship">
-                            <input type="text" name="user[2][relationship]" value="$day">
-                        </div>
-                    </div>
-                    <div class="user-item">
-                        <div class="fio">
-                            <input type="text" name="user[3][first-name]" value="$day">
-                            <input type="text" name="user[3][last-name]" value="$day">
-                            <input type="text" name="user[3][third-name]" value="$day">   
-                        </div>
-                        <div class="driver-info">
-                            <input type="text" name="user[3][serial]" class="serial" value="$day">
-                            <input type="text" name="user[3][number]" class="number" value="$day">
-                        </div>
-                        <div class="relationship">
-                            <input type="text" name="user[3][relationship]" value="$day">
-                        </div>
-                    </div>
-                    <div class="user-item">
-                        <div class="fio">
-                            <input type="text" name="user[4][first-name]" value="$day">
-                            <input type="text" name="user[4][last-name]" value="$day">
-                            <input type="text" name="user[3][third-name]" value="$day">   
-                        </div>
-                        <div class="driver-info">
-                            <input type="text" name="user[3][serial]" class="serial" value="$day">
-                            <input type="text" name="user[3][number]" class="number" value="$day">
-                        </div>
-                        <div class="relationship">
-                            <input type="text" name="user[3][relationship]" value="$day">
-                        </div>
-                    </div>
-                </div>
+            <input type="text" name="date_from__day" value="09">
+            <input type="text" name="date_from__month" value="Ноябрь">
+            <input type="text" name="date_from__year" value="20">
+            <input type="text" name="date_to__day" value="09">
+            <input type="text" name="date_to__month" value="Октябрь">
+            <input type="text" name="date_to__year" value="21">
+            <input type="text" name="insurance_giver__company" value="Tashkent Investment Organistaion">
+            <input type="text" name="insurance_owner__fio" value="Ахмедов Одил">
+            <input type="text" name="insurance_owner__phone" value="998971631236" maxlength="12">
+            <input type="text" name="tranport_info__model" value="Ravon Nexia3">
+            <input type="text" name="tranport_info__year" value="2020">
+            <input type="text" name="tranport_info__engine_number" value="FAFA2020">
+            <input type="text" name="tranport_info__shassi_number" value="55396974">
+            <input type="text" name="tranport_info__gov_number" value="01AAA007">
+            <input type="text" name="owner__work_type" value="Дастурий махсулотлар ишлаб чикариш">
+            <input type="text" name="owner__transport_region" value="Тошкент шахри">
+            <div class="family-item item-1">
+                <input type="text" name="who_can_drive__first_name" value="Cristiano">
+                <input type="text" name="who_can_drive__second_name" value="Ronaldo">
+                <input type="text" name="who_can_drive__last_name" value="Junior">
+                <input type="text" name="who_can_drive__passport_serial" value="AA">
+                <input type="text" name="who_can_drive__passport_number" value="7777777">
+                <input type="text" name="who_can_drive__relation_type" value="Football">
+            </div>
+            <div class="family-item item-2">
+                <input type="text" name="who_can_drive__first_name" value="Cristiano">
+                <input type="text" name="who_can_drive__second_name" value="Ronaldo">
+                <input type="text" name="who_can_drive__last_name" value="Junior">
+                <input type="text" name="who_can_drive__passport_serial" value="AA">
+                <input type="text" name="who_can_drive__passport_number" value="7777777">
+                <input type="text" name="who_can_drive__relation_type" value="Football">
+            </div>
+            <div class="family-item item-3">
+                <input type="text" name="who_can_drive__first_name" value="Cristiano">
+                <input type="text" name="who_can_drive__second_name" value="Ronaldo">
+                <input type="text" name="who_can_drive__last_name" value="Junior">
+                <input type="text" name="who_can_drive__passport_serial" value="AA">
+                <input type="text" name="who_can_drive__passport_number" value="7777777">
+                <input type="text" name="who_can_drive__relation_type" value="Football">
+            </div>
+            <div class="family-item item-4">
+                <input type="text" name="who_can_drive__first_name" value="Cristiano">
+                <input type="text" name="who_can_drive__second_name" value="Ronaldo">
+                <input type="text" name="who_can_drive__last_name" value="Junior">
+                <input type="text" name="who_can_drive__passport_serial" value="AA">
+                <input type="text" name="who_can_drive__passport_number" value="7777777">
+                <input type="text" name="who_can_drive__relation_type" value="Football">
+            </div>
+            <div class="family-item item-5">
+                <input type="text" name="who_can_drive__first_name" value="Cristiano">
+                <input type="text" name="who_can_drive__second_name" value="Ronaldo">
+                <input type="text" name="who_can_drive__last_name" value="Junior">
+                <input type="text" name="who_can_drive__passport_serial" value="AA">
+                <input type="text" name="who_can_drive__passport_number" value="7777777">
+                <input type="text" name="who_can_drive__relation_type" value="Football">
             </div>
         </form>
     </div>
