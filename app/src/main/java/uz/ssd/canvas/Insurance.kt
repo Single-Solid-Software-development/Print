@@ -1,0 +1,26 @@
+package uz.ssd.canvas
+
+data class Insurance(
+    val reward1Digit: String,
+    val reward1Alpha: String,
+    val reward2Digit: String,
+    val reward2Alpha: String,
+    val reward3Digit: String,
+    val reward3Alpha: String,
+    val reward4Digit: String,
+    val reward4Alpha: String,
+    val region: String,
+    val subdivisions: String,
+    val address: String,
+    val serial: String,
+    val number: String,
+    val serialState: String,
+    val numberState: String,
+    val comment: String,
+    val fio: String,
+    val day: String,
+    val month: String,
+    val year: String,
+    val hour: String,
+    val minute: String,
+)
