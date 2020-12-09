@@ -34,7 +34,30 @@ class Kasko1 : BaseActivity() {
 
     private fun download() {
         val data = KaskoData(
-
+                "UIL 7000007",
+                "Familya Ismi Otasining Ismi",
+                "Toshkent shahar Arnasoy Street 12-uy 12-Xonadon",
+                "+998 99 857 11 22",
+                "Familya Ismi Otasining Ismi Ikkinchi",
+                "+998 99 857 44 55",
+                "",
+                "☑",
+                "",
+                "",
+                "946 000",
+                "",
+                "",
+                "1 000 000",
+                "",
+                "09",
+                "12",
+                "20",
+                "1",
+                "2",
+                "21",
+                "Toshkent Viloyati Qizil qum ko\'chasi",
+                "Familya Ismi Otasining Ismi Director",
+                "Familya Ismi Otasining Ismi Agent",
         )
         mediaType = PrintAttributes.MediaSize.ISO_A4
         webView.loadDataWithBaseURL(

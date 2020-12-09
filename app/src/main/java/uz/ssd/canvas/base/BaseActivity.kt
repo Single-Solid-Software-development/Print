@@ -1,6 +1,7 @@
 package uz.ssd.canvas.base
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.print.PrintAttributes
 import android.print.PrintJob
@@ -12,6 +13,7 @@ import android.webkit.WebView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import uz.ssd.canvas.osago.MainActivity0
 import uz.ssd.canvas.z_test.TripleDES
 
 abstract class BaseActivity : AppCompatActivity() {
@@ -55,6 +57,9 @@ abstract class BaseActivity : AppCompatActivity() {
     protected fun showMessage(message: String) =
             Toast.makeText(applicationContext, message, Toast.LENGTH_LONG).show()
 
+//    protected fun startActivity(activity: Class){
+//        startActivity(Intent(this, activity))
+//    }
     protected fun checkMessage() {
         val error1 = "2fYontnae0uGRMj+2lTSQQr2MD3ec+uAEeb0RcIjk0Pmp00tiJfCg5JLmbLxIwvvFQ5siHK9yjAgUVHoXbkJ68h0FrVD2AIQ"
         // Не удалось получить информацию о карте

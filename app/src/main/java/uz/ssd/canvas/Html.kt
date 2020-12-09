@@ -390,7 +390,7 @@ object Html {
         <table class="table03" >
             <tr>
                 <th>ПОЛИС СТРАХОВАНИЯ ТРАНСПОРТНОГО СРЕДСТВА  «АвтоХИМОЯ»» № 
-                    <span class="bottom-line01"></span>
+                    <span class="bottom-line01">${data.polisNumber}</span>
                 </th>
                 
                 
@@ -404,18 +404,18 @@ object Html {
                     <i class="table04-3">(Ф.И.О., адрес и контактный телефон)</i>
                 </td>
                 <td class="bline">
-                    <span class="b-line01"></span>
+                    <span class="b-line01">${data.fio}</span>
                 </td>
                 
             </tr>
             <tr>
                 <td class="bline">
-                    <span class="b-line01"></span>
+                    <span class="b-line01">${data.address}</span>
                 </td>
             </tr>
             <tr>
                 <td class="bline">
-                    <span class="b-line01"></span>
+                    <span class="b-line01">${data.phone}</span>
                 </td>
             </tr>
             
@@ -427,13 +427,13 @@ object Html {
                     <i class="table04-6">(Ф.И.О. и контактный телефон)</i>
                 </td>
                 <td style="height: 20px;">
-                    <span class="bottom-line01"></span> 
+                    <span class="bottom-line01">${data.fio2}</span> 
                 </td>
                 
             </tr>
             <tr>
                 <td style="height: 20px;">
-                    <span class="bottom-line01"></span>
+                    <span class="bottom-line01">${data.tel2}</span>
                 </td>
             </tr>
             
@@ -458,14 +458,14 @@ object Html {
                     
                 </td>
                 <td class="table04-13">
-                    <span>☑️</span>
+                    <span>${data.doneStandart}</span>
                 </td>
                 <td class="table04-14"> 
-                    <span class="bottom-line01" ></span>
+                    <span class="bottom-line01" >${data.priceStandart}</span>
                 </td>
                 <td class="table04-15">0.8%</td>
                 <td class="table04-16">
-                    <span class="bottom-line01" ></span>
+                    <span class="bottom-line01" >${data.pricePrimiumStandart}</span>
                 </td>
                 
             </tr>
@@ -477,13 +477,13 @@ object Html {
                     
                 </td>
                 <td class="table04-13">
-                    <span></span>
+                    <span>${data.donePerimium}</span>
                 </td>
                 <td class="table04-14">
-                    <span class="bottom-line01" ></span></td>
+                    <span class="bottom-line01" >${data.pricePerimium}</span></td>
                 <td class="table04-15">1.0%</td>
                 <td class="table04-16">
-                    <span class="bottom-line01" ></span>
+                    <span class="bottom-line01" >${data.pricePrimiumPerimium}</span>
                 </td>
                 
             </tr>
@@ -495,14 +495,14 @@ object Html {
                     
                 </td>
                 <td class="table04-13">
-                    <span></span>
+                    <span>${data.doneGold}</span>
                 </td>
                 <td class="table04-14">
-                    <span class="bottom-line01" ></span>
+                    <span class="bottom-line01" >${data.priceGold}</span>
                 </td>
                 <td class="table04-15">1.2%</td>
                 <td class="table04-16">
-                    <span class="bottom-line01"></span>
+                    <span class="bottom-line01">${data.pricePrimiumGold}</span>
                 </td>
                 
             </tr>
@@ -512,12 +512,12 @@ object Html {
         <table class="table04">
             <tr>
                 <td class="tabel04-17">7. Период страхования: с «
-                    <span style="width:2%; height: 15px;" class="bottom-line01"></span> »
-                    <span style="width:10%;height: 15px;" class="bottom-line01"></span>20
-                    <span style="width:2%;height: 15px;" class="bottom-line01"></span> года по 
-                    «<span style="width:2%;height: 15px;" class="bottom-line01"></span> »
-                    <span style="width:10%;height: 15px;" class="bottom-line01"></span>  20
-                    <span style="width:2%;height: 15px;" class="bottom-line01"></span> года
+                    <span style="width:2%; height: 15px;" class="bottom-line01">${data.fromDay}</span> »
+                    <span style="width:10%;height: 15px;" class="bottom-line01">${data.fromMonth}</span>20
+                    <span style="width:2%;height: 15px;" class="bottom-line01">${data.fromYear}</span> года по 
+                    «<span style="width:2%;height: 15px;" class="bottom-line01">${data.toDay}</span> »
+                    <span style="width:10%;height: 15px;" class="bottom-line01">${data.toMonth}</span>  20
+                    <span style="width:2%;height: 15px;" class="bottom-line01">${data.toYear}</span> года
                 </td>
             </tr>
         </table>
@@ -536,17 +536,17 @@ object Html {
             <tr>
                 <td class="table04-18" style="width: 30.1%">Директор филиала в 
                     <span class="t04-18">
-                        <div class="bot-line"></div>
+                        <div class="bot-line">${data.whereViloyat}</div>
                         <span>вилояте</span>
                     </span>
-                    <div class="bot-line"></div>
+                    <div class="bot-line">${data.direcotrFio}</div>
                     <i>(Ф.И.О.)</i>
                 </td>
                 
 
                 <td class="table04-18" style="width: 35% ">
                     
-                    <div class="bot-line"  style="padding-top: 40px;" ></div>
+                    <div class="bot-line"  style="padding-top: 40px;" >${data.agentName}</div>
                     <i>(Ф.И.О.)</i>
                 </td>
                 
@@ -584,14 +584,6 @@ object Html {
             С предложениями и жалобами по поводу качества обслуживания <br>
             Вы можете позвонить по телефону доверия (71)200 02 34 (понедельник-пятница с 9.00 до 18.00)
         </div>
-
-        
-
-
-
-
-        
-
     </div>
 </body>
 </html> """
