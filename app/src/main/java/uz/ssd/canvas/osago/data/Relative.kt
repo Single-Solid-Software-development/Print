@@ -1,6 +1,21 @@
-package uz.ssd.canvas
+package uz.ssd.canvas.osago.data
 
-data class Insurance(
+data class Relative(
+    val r1Name: String,
+    val r1Certificate: String,
+    val r1Type: String,
+    val r2Name: String,
+    val r2Certificate: String,
+    val r2Type: String,
+    val r3Name: String,
+    val r3Certificate: String,
+    val r3Type: String,
+    val r4Name: String,
+    val r4Certificate: String,
+    val r4Type: String,
+    val r5Name: String,
+    val r5Certificate: String,
+    val r5Type: String,
     val reward1Digit: String,
     val reward1Alpha: String,
     val reward2Digit: String,

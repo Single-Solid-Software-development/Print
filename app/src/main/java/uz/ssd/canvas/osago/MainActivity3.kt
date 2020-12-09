@@ -1,0 +1,55 @@
+package uz.ssd.canvas.osago
+
+import android.os.Bundle
+import android.view.View
+import android.webkit.WebSettings
+import kotlinx.android.synthetic.main.activity_main.*
+import uz.ssd.canvas.Html
+import uz.ssd.canvas.Html.DESKTOP_USER_AGENT
+import uz.ssd.canvas.R
+import uz.ssd.canvas.base.BaseActivity
+import uz.ssd.canvas.osago.data.Relative
+
+
+class MainActivity3 : BaseActivity() {
+
+    override val layoutRes: Int = R.layout.activity_main
+    private lateinit var relative: Relative
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val settings: WebSettings = webView.settings
+        settings.userAgentString = DESKTOP_USER_AGENT
+
+        btn.setOnClickListener { createWebPagePrint(webView) }
+        btn2.setOnClickListener { download() }
+
+    }
+
+    private fun download() {
+        relative = Relative(
+                "Aziz Azizov", "AB534", "Akasi",
+                "Aziz Azizov", "AB534", "Akasi",
+                "Aziz Azizov", "AB534", "Akasi",
+                "Aziz Azizov", "AB534", "Akasi",
+                "Aziz Azizov", "AB534", "Akasi",
+                "1400000", "Bir million to`rt yuz ming",
+                "1400000", "Bir million to`rt yuz ming",
+                "1400000", "Bir million to`rt yuz ming",
+                "1400000", "Bir million to`rt yuz ming",
+                "Toshkent", "Yunusobod, Yakkasaroy, Sirg`ali, ...",
+                "Toshkent 11, Navoiy ko`chasi 28, 9A uy",
+                "AA", "3838605", "AB", "534",
+                "Lorem ipsum", "Azizov Aziz", "30", "noyabr", "20", "16", "08"
+        )
+
+        webView.loadDataWithBaseURL(
+                "file:///android_asset/style3.css",
+                Html.html3(relative),
+                "text/html",
+                "UTF-8",
+                null
+        )
+    }
+}

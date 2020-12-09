@@ -1,4 +1,4 @@
-package uz.ssd.canvas;
+package uz.ssd.canvas.z_test;
 
 import android.util.Base64;
 

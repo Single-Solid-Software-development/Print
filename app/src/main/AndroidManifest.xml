@@ -10,7 +10,7 @@
         android:roundIcon="@drawable/ic_printer"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".kasko.Kasko1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,8 +18,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity2"/>
-        <activity android:name=".MainActivity3"/>
+        <activity android:name=".osago.MainActivity"/>
+        <activity android:name=".osago.MainActivity2"/>
+        <activity android:name=".osago.MainActivity3"/>
+        <activity android:name=".osago.MainActivity0"/>
     </application>
 
 </manifest>

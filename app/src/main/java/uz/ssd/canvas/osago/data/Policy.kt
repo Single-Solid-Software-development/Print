@@ -1,4 +1,4 @@
-package uz.ssd.canvas
+package uz.ssd.canvas.osago.data
 
 data class Policy(
     val day1: String,
