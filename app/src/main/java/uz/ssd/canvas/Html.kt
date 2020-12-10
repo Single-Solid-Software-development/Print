@@ -427,13 +427,13 @@ object Html {
                     <i class="table04-6">(Ф.И.О. и контактный телефон)</i>
                 </td>
                 <td style="height: 20px;">
-                    <span class="bottom-line01">${data.fio2}</span> 
+                    <span class="b-line02">${data.fio2}</span> 
                 </td>
                 
             </tr>
             <tr>
                 <td style="height: 20px;">
-                    <span class="bottom-line01">${data.tel2}</span>
+                    <span class="b-line02">${data.tel2}</span>
                 </td>
             </tr>
             
@@ -555,7 +555,7 @@ object Html {
                         Правила и <br>
                         Страховой полис получил: 
                         <span class="bot-line"></span><br>
-                        <div class="bot-line"></div>
+                        <div class="bot-line">Famila Isming Otasini ismi</div>
                         <i>(подпись)</i>
                 </td>
                 
