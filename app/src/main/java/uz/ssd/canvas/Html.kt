@@ -226,75 +226,167 @@ object Html {
 """
     }
 
+    /* fun html3(relative: Relative): String {
+         return """<!DOCTYPE html>
+ <html lang="">
+ <head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Blue document 2</title>
+   <link rel="stylesheet" href="style3.css">
+ </head>
+ <body class="document">
+ <div class="page">
+
+   <table class="table_relative">
+     <tr class="tr_relatives">
+       <td class="relatives">${relative.r1Name}</td>
+       <td class="license">${relative.r1Certificate}</td>
+       <td class="kinship">${relative.r1Type}</td>
+     </tr>
+     <tr class="tr_relatives">
+      <td class="relatives">${relative.r2Name}</td>
+       <td class="license">${relative.r2Certificate}</td>
+       <td class="kinship">${relative.r2Type}</td>
+     </tr>
+     <tr class="tr_relatives">
+       <td class="relatives"> ${relative.r3Name}</td>
+       <td class="license">${relative.r3Certificate}</td>
+       <td class="kinship">${relative.r3Type}</td>
+     </tr>
+     <tr class="tr_relatives">
+       <td class="relatives">${relative.r4Name}</td>
+       <td class="license">${relative.r4Certificate}</td>
+       <td class="kinship">${relative.r4Type}</td>
+     </tr>
+     <tr class="tr_relatives">
+       <td class="relatives">${relative.r5Name}</td>
+       <td class="license">${relative.r5Certificate}</td>
+       <td class="kinship">${relative.r5Type}</td>
+     </tr>
+   </table>
+
+   <table class="table_reward">
+     <tr class="tr_reward">
+      <td class="sum_digit">${relative.reward1Digit}</td>
+       <td class="sum_alpha">${relative.reward1Alpha}</td>
+     </tr>
+     <tr class="tr_reward">
+       <td class="sum_digit">${relative.reward2Digit}</td>
+       <td class="sum_alpha">${relative.reward2Alpha}</td>
+     </tr>
+     <tr class="tr_reward">
+       <td class="sum_digit">${relative.reward3Digit}</td>
+       <td class="sum_alpha">${relative.reward3Alpha}</td>
+     </tr>
+     <tr class="tr_reward">
+       <td class="sum_digit">${relative.reward4Digit}</td>
+       <td class="sum_alpha">${relative.reward4Alpha}</td>
+     </tr>
+   </table>
+
+   <table class="table_region">
+     <tr class="regional_info">
+       <td class="region">${relative.region}</td>
+       <td class="region_unit">${relative.subdivisions}</td>
+       <td class="addresses">${relative.address}</td>
+     </tr>
+   </table>
+   <table>
+     <tr class="series_info">
+       <td class="series">${relative.serial}</td>
+       <td class="number">${relative.number}</td>
+       <td class="state_series">${relative.serialState}</td>
+       <td class="state_number">${relative.numberState}</td>
+     </tr>
+     <tr class="comment">
+       <td>${relative.comment}</td>
+     </tr>
+     <tr class="delegate_name">
+       <td>${relative.fio}</td>
+     </tr>
+     <tr class="date">
+       <td class="day">${relative.day}</td>
+       <td class="month">${relative.month}</td>
+       <td class="year">${relative.year}</td>
+     </tr>
+     <tr class="time">
+       <td class="hour">${relative.hour}</td>
+       <td class="minut">${relative.minute}</td>
+     </tr>
+   </table>
+ </div>
+ <script type="text/javascript">
+   // window.print();
+ </script>
+ </body>
+ </html>
+ """
+     }*/
+
     fun html3(relative: Relative): String {
         return """<!DOCTYPE html>
 <html lang="">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Blue document 2</title>
-  <link rel="stylesheet" href="style3.css">
+  <title>Red Document 2</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="document">
 <div class="page">
-
-  <table class="table_relative">
-    <tr class="tr_relatives">
-      <td class="relatives">${relative.r1Name}</td>
-      <td class="license">${relative.r1Certificate}</td>
-      <td class="kinship">${relative.r1Type}</td>
-    </tr>
-    <tr class="tr_relatives">
-     <td class="relatives">${relative.r2Name}</td>
-      <td class="license">${relative.r2Certificate}</td>
-      <td class="kinship">${relative.r2Type}</td>
-    </tr>
-    <tr class="tr_relatives">
-      <td class="relatives"> ${relative.r3Name}</td>
-      <td class="license">${relative.r3Certificate}</td>
-      <td class="kinship">${relative.r3Type}</td>
-    </tr>
-    <tr class="tr_relatives">
-      <td class="relatives">${relative.r4Name}</td>
-      <td class="license">${relative.r4Certificate}</td>
-      <td class="kinship">${relative.r4Type}</td>
-    </tr>
-    <tr class="tr_relatives">
-      <td class="relatives">${relative.r5Name}</td>
-      <td class="license">${relative.r5Certificate}</td>
-      <td class="kinship">${relative.r5Type}</td>
-    </tr>
-  </table>
-
-  <table class="table_reward">
-    <tr class="tr_reward">
-     <td class="sum_digit">${relative.reward1Digit}</td>
-      <td class="sum_alpha">${relative.reward1Alpha}</td>
-    </tr>
-    <tr class="tr_reward">
-      <td class="sum_digit">${relative.reward2Digit}</td>
-      <td class="sum_alpha">${relative.reward2Alpha}</td>
-    </tr>
-    <tr class="tr_reward">
-      <td class="sum_digit">${relative.reward3Digit}</td>
-      <td class="sum_alpha">${relative.reward3Alpha}</td>
-    </tr>
-    <tr class="tr_reward">
-      <td class="sum_digit">${relative.reward4Digit}</td>
-      <td class="sum_alpha">${relative.reward4Alpha}</td>
-    </tr>
-  </table>
-
-  <table class="table_region">
-    <tr class="regional_info">
-      <td class="region">${relative.region}</td>
-      <td class="region_unit">${relative.subdivisions}</td>
-      <td class="addresses">${relative.address}</td>
-    </tr>
-  </table>
   <table>
+    <tr class="top_space"></tr>
+    <tr class="relatives">
+      <td class="relative_name"> ${relative.r1Name} </td>
+      <td class="relative_licence"> ${relative.r1Certificate} </td>
+      <td class="relative_level"> ${relative.r1Type} </td>
+    </tr>
+    <tr class="relatives">
+     <td class="relative_name"> ${relative.r2Name} </td>
+      <td class="relative_licence"> ${relative.r2Certificate} </td>
+      <td class="relative_level"> ${relative.r2Type} </td>
+    </tr>
+    <tr class="relatives3">
+      <td class="relative_name"> ${relative.r3Name} </td>
+      <td class="relative_licence"> ${relative.r3Certificate} </td>
+      <td class="relative_level"> ${relative.r3Type} </td>
+    </tr>
+    <tr class="relatives4">
+     <td class="relative_name"> ${relative.r4Name} </td>
+      <td class="relative_licence"> ${relative.r4Certificate} </td>
+      <td class="relative_level"> ${relative.r4Type} </td>
+    </tr>
+    <tr class="relatives5">
+     <td class="relative_name"> ${relative.r5Name} </td>
+      <td class="relative_licence"> ${relative.r5Certificate} </td>
+      <td class="relative_level"> ${relative.r5Type} </td>
+    </tr>
+    <tr class="body_space"></tr>
+    <tr class="insurer_sum">
+      <td class="with_numbers"> ${relative.reward1Digit} </td>
+      <td class="with_words">${relative.reward1Alpha}</td>
+    </tr>
+    <tr class="insurer_award">
+       <td class="with_numbers"> ${relative.reward2Digit} </td>
+      <td class="with_words">${relative.reward2Alpha}</td>
+    </tr>
+    <tr class="discount_award">
+      <td class="with_numbers"> ${relative.reward3Digit} </td>
+      <td class="with_words">${relative.reward3Alpha}</td>
+    </tr>
+    <tr class="paid_award">
+      <td class="with_numbers"> ${relative.reward4Digit} </td>
+      <td class="with_words">${relative.reward4Alpha}</td>
+    </tr>
+    <tr class="body_space2"></tr>
+    <tr class="regional_info">
+      <td class="region"> ${relative.region}</td>
+      <td class="region_unit"> ${relative.subdivisions} </td>
+      <td class="addresses"> ${relative.address}</td>
+    </tr>
     <tr class="series_info">
-      <td class="series">${relative.serial}</td>
+      <td class="series"> ${relative.serial} </td>
       <td class="number">${relative.number}</td>
       <td class="state_series">${relative.serialState}</td>
       <td class="state_number">${relative.numberState}</td>
@@ -322,7 +414,9 @@ object Html {
 </body>
 </html>
 """
+
     }
+
 
     fun kaskoHtml1(data: KaskoData): String {
         return """ <!DOCTYPE html>
