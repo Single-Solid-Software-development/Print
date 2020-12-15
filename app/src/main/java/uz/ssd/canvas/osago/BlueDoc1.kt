@@ -8,6 +8,7 @@ import android.webkit.WebSettings
 import android.webkit.WebStorage
 import android.webkit.WebView
 import kotlinx.android.synthetic.main.activity_main.*
+import uz.ssd.canvas.Html
 import uz.ssd.canvas.Html.DESKTOP_USER_AGENT
 import uz.ssd.canvas.Html.htmlCss
 import uz.ssd.canvas.Html.htmlString
@@ -35,7 +36,14 @@ class BlueDoc1 : BaseActivity() {
 
     private fun download() {
         clear()
-        webView.loadDataWithBaseURL(htmlCss, htmlString, "text/html", "UTF-8", null)
+//        webView.loadDataWithBaseURL(htmlCss, htmlString, "text/html", "UTF-8", null)
+        webView.loadDataWithBaseURL(
+            "file:///android_asset/bluestyle1.css",
+            htmlString,
+            "text/html",
+            "UTF-8",
+            null
+        )
     }
 
     private fun clear() {

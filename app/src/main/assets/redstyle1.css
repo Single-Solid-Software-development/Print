@@ -169,7 +169,7 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 .page {
-   background: url("img/red_bg_1.png") no-repeat;
+   /*background: url("img/red_bg_1.png") no-repeat;*/
     background-size: cover;
 }
 table{

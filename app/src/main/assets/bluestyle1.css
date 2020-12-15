@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*! normalize.css v1.0.1 | MIT License | git.io/normalize */
+        article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.75em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#FF0;color:#000}p,pre{margin:1em 0}code,kbd,pre,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space: pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:80%}sub,sup{font-size: 75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border: 0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #C0C0C0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size: 100%;margin: 0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="checkbox"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+@page {
+    margin:0;
+    size: A5;
+}
+body{
+    font-family: 'Times New Roman', serif;
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 0;
+    height: 210mm;
+    /* width: 148.5mm; */
+    /*background-image: url('images/bg1.jpg');*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: unset;
+    position: relative;
+}
+input{
+    border: none;
+    background: transparent;
+    outline: 1px solid black;
+    width: auto;
+    position: absolute;
+}
+input[name=date_from__day]{
+    top: 29.5%;
+    left: 8.5%;
+    max-width: .5cm;
+}
+input[name=date_from__month]{
+    top: 29.5%;
+    left: 15%;
+    max-width: 2cm;
+}
+input[name=date_from__year]{
+    top: 29.5%;
+    left: 33%;
+    max-width: .5cm;
+}
+input[name=date_to__day]{
+    top: 29.5%;
+    left: 57.5%;
+    max-width: .5cm;
+}
+input[name=date_to__month]{
+    top: 29.5%;
+    left: 64%;
+    max-width: 2cm;
+}
+input[name=date_to__year]{
+    top: 29.5%;
+    left: 81%;
+    max-width: .5cm;
+}
+input[name=insurance_giver__company]{
+    top: 32.5%;
+    left: 8.5%;
+    width: 12.5cm;
+}
+input[name=insurance_owner__fio]{
+    top: 36.5%;
+    left: 8.5%;
+    width: 12.5cm;
+}
+.insurance_owner__phone{
+    position: absolute;
+    top: 41.5%;
+    left: 31%;
+    width: 11cm;
+    outline: 1px solid red;
+    font-family: Lato;
+}
+input[name=tranport_info__model]{
+    top: 54.3%;
+    left: 6.5%;
+    width: 2.7cm;
+}
+input[name=tranport_info__year]{
+    top: 54.3%;
+    left: 28%;
+    width: 1.2cm;
+}
+input[name=tranport_info__engine_number]{
+    top: 54.3%;
+    left: 39%;
+    width: 2cm;
+}
+input[name=tranport_info__shassi_number]{
+    top: 54.3%;
+    left: 55%;
+    width: 2.5cm;
+}
+input[name=tranport_info__gov_number]{
+    top: 54.3%;
+    left: 74%;
+    width: 2.6cm;
+}
+input[name=owner__work_type]{
+    top: 58.5%;
+    left: 43%;
+    width: 7.4cm;
+}
+input[name=owner__transport_region]{
+    top: 62.4%;
+    left: 43%;
+    width: 7.4cm;
+}
+.family-item{
+    position: absolute;
+    font-size: 11px;
+}
+.family-item.item-1{
+    top: 74%;
+    left: 14%;
+    width: 100%;
+    min-height: 1cm;
+}
+.family-item.item-2{
+    top: 80.1%;
+    left: 14%;
+    width: 100%;
+    min-height: 1cm;
+}
+.family-item.item-3{
+    top: 86.1%;
+    left: 14%;
+    width: 100%;
+    min-height: 1cm;
+}
+.family-item.item-4{
+    top: 92.2%;
+    left: 14%;
+    width: 100%;
+    min-height: 1cm;
+}
+.family-item.item-5{
+    top: 98.4%;
+    left: 14%;
+    width: 100%;
+    min-height: 1cm;
+}
+input[name=who_can_drive__first_name]{
+    top: -0.1cm;
+    left: 0;
+    width: 4.4cm;
+}
+input[name=who_can_drive__second_name]{
+    top: 21%;
+    left: 0%;
+    width: 4.4cm;  
+}
+input[name=who_can_drive__last_name]{
+    top: 53%;
+    left: 0%;
+    width: 4.4cm;  
+}
+input[name=who_can_drive__passport_serial]{
+    top: 27%;
+    left: 39.5%;
+    width: 0.4cm;
+}
+input[name=who_can_drive__passport_number]{
+    top: 27%;
+    left: 46.5%;
+    width: 1.2cm;
+}
+input[name=who_can_drive__relation_type]{
+    top: 27%;
+    left: 58%;
+    width: 2.8cm;
+}

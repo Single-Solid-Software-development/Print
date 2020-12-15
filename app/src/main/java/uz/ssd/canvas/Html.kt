@@ -22,7 +22,7 @@ object Html {
 	<meta http-equiv="Pragma" content="no-cache" />
 	<meta http-equiv="Expires" content="0" />
 	<link rel="stylesheet" href="fonts/stylesheet.css">
-    <link rel="stylesheet" href="bluestyle2.css">
+    <link rel="stylesheet" href="bluestyle1.css">
     <title>Pdf to Html</title>
 </head>
 <body>
