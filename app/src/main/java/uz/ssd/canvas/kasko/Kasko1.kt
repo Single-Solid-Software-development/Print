@@ -11,7 +11,7 @@ import uz.ssd.canvas.Html.kaskoHtml1
 import uz.ssd.canvas.R
 import uz.ssd.canvas.base.BaseActivity
 import uz.ssd.canvas.kasko.data.KaskoData
-import uz.ssd.canvas.osago.MainActivity0
+import uz.ssd.canvas.osago.BlueDoc1
 
 class Kasko1 : BaseActivity() {
 
@@ -24,7 +24,7 @@ class Kasko1 : BaseActivity() {
         val settings: WebSettings = webView.settings
         settings.userAgentString = DESKTOP_USER_AGENT
         btn3.setOnClickListener {
-            startActivity(Intent(this, MainActivity0::class.java))
+            startActivity(Intent(this, BlueDoc1::class.java))
         }
         btn3.text = "Osago Blue Doc"
 
@@ -61,7 +61,7 @@ class Kasko1 : BaseActivity() {
         )
         mediaType = PrintAttributes.MediaSize.ISO_A4
         webView.loadDataWithBaseURL(
-                "file:///android_asset/style.css",
+                "file:///android_asset/bluestyle2.css",
                 kaskoHtml1(data),
                 "text/html",
                 "UTF-8",

@@ -18,10 +18,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".osago.MainActivity"/>
-        <activity android:name=".osago.MainActivity2"/>
-        <activity android:name=".osago.MainActivity3"/>
-        <activity android:name=".osago.MainActivity0"/>
+        <activity android:name=".osago.BlueDoc2"/>
+        <activity android:name=".osago.RedDoc1"/>
+        <activity android:name=".osago.RedDoc2"/>
+        <activity android:name=".osago.BlueDoc1"/>
     </application>
 
 </manifest>

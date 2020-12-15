@@ -1,7 +1,6 @@
 package uz.ssd.canvas.osago
 
 import android.os.Bundle
-import android.view.View
 import android.webkit.WebSettings
 import kotlinx.android.synthetic.main.activity_main.*
 import uz.ssd.canvas.Html
@@ -11,7 +10,7 @@ import uz.ssd.canvas.base.BaseActivity
 import uz.ssd.canvas.osago.data.Relative
 
 
-class MainActivity3 : BaseActivity() {
+class RedDoc2 : BaseActivity() {
 
     override val layoutRes: Int = R.layout.activity_main
     private lateinit var relative: Relative
@@ -45,8 +44,8 @@ class MainActivity3 : BaseActivity() {
         )
 
         webView.loadDataWithBaseURL(
-                "file:///android_asset/style3.css",
-                Html.html3(relative),
+                "file:///android_asset/redstyle2.css",
+                Html.redHtml2(relative),
                 "text/html",
                 "UTF-8",
                 null

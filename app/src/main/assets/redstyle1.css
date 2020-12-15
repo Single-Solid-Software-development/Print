@@ -169,7 +169,7 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 .page {
-    /*background: url("img/blue_doc2_bg.png") no-repeat;*/
+   background: url("img/red_bg_1.png") no-repeat;
     background-size: cover;
 }
 table{
@@ -185,114 +185,96 @@ tr {
     display: flex;
 }
 td {
+    width:100%;
     height: 100%;
     border: solid 1px;
 }
-.top_space {
-    height: 31px;
+
+
+.table_polis {
+    margin-top: 225px;
 }
-.insurer_sum, .discount_award {
-    height: 43px;
-}
-.insurer_award, .paid_award {
-    height: 41px;
-}
-.with_numbers{
-    width: 25%;
-    margin-left: auto;
-}
-.with_words {
-    width: 48%;
-}
-.body_space {
-    height: 144px;
-}
-.regional_info {
-    height: 200px;
-}
-.regional_info .region {
-    width: 24%;
-}
-.regional_info .region_unit {
-    width: 30.5%;
-}
-.regional_info .addresses {
-    width: 45.4%;
-}
-.series_info {
-    height: 31px;
-}
-.series, .number {
-    height: 20px;
-}
-.state_series, .state_number {
-    margin-top: auto;
-    height: 18px;
-}
-.series {
-    width: 32px;
-    margin-left: 44px;
-}
-.number {
-    width: 49px;
-    margin-left: 15px;
-}
-.state_series {
-    width: 6.5%;
-    margin-left: auto;
-    margin-right: 14px;
-}
-.state_number{
-    width: 10.5%;
-}
-.comment {
-    height: 75px;
-}
-.comment td {
-    width: 76.7%;
-    height: 14px;
-    margin-left: auto;
-}
-.delegate_name {
+.tr_polis_date {
     height: 16px;
+    margin-left: 10px;
 }
-.delegate_name td {
-    width: 22.9%;
-    margin-left: 70px;
+.day1 {
+    width: 7,1%;
 }
-.date {
-    height: 34px;
+.month1 {
+    width: 21,4%;
 }
-.date td {
-    margin-top: auto;
-    height: 40%;
+.year1 {
+    width: 7.1%;
 }
-.date .day {
-    width: 33px;
-    margin-left: auto;
-    margin-right: 10px;
+.day2 {
+    width: 7,1%;
 }
-.date .month {
-    width: 86px;
-    margin-right: 15px;
+.month2 {
+    width: 21,4%;
 }
-.date .year {
-    width: 6.2%;
-    margin-right: 20px;
+.year2 {
+    width: 7.1%;
 }
-.time {
-    height: 23px;
+.date_space {
+    width: 21.4%;
 }
-.time td {
-    height: 80%;
-    margin-top: auto;
+
+.tr_insurer_details {
+    height: 16px;
+    margin-left: 10px;
+    margin-top: 20px;
 }
-.time .hour {
-    width: 20%;
-    margin-left: auto;
-    margin-right: 33px;
+.name_details {
+    width: 100%;
 }
-.time .minut {
-    margin-right: 40px;
-    width: 12.7%;
+
+.tr_insured_details {
+    height: 16px;
+    margin-left: 10px;
+    margin-top: 55px;
+}
+
+.tr_phone {
+    height: 16px;
+    margin-left: 10px;
+    margin-top: 70px;
+}
+
+.td_phone {
+    margin-left: 130px;
+}
+
+.tr_info_car {
+    height: 16px;
+    margin-left: 4px;
+    margin-top: 85px;
+}
+
+.model {
+    width: 24,8%;
+}
+.make_year {
+    width: 13,8%;
+}
+.dvig_number {
+    width: 18,9%;
+}
+.kuzov_number {
+    width: 21,8%;
+}
+.numbers {
+    width: 22%;
+}
+
+.tr_insurer_work {
+    height: 16px;
+    margin-left: 4px;
+    margin-top: 60px;
+}
+
+.tr_use_car_region {
+    height: 16px;
+    margin-left: 4px;
+    margin-top: 90px;
 }

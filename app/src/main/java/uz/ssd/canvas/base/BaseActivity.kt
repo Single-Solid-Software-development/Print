@@ -1,7 +1,6 @@
 package uz.ssd.canvas.base
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.print.PrintAttributes
 import android.print.PrintJob
@@ -13,7 +12,6 @@ import android.webkit.WebView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import uz.ssd.canvas.osago.MainActivity0
 import uz.ssd.canvas.z_test.TripleDES
 
 abstract class BaseActivity : AppCompatActivity() {
@@ -25,6 +23,7 @@ abstract class BaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(layoutRes)
         showMessage(android.os.Build.DEVICE + android.os.Build.MODEL + android.os.Build.PRODUCT)
+        clear()
     }
 
     protected fun createWebPagePrint(webView: WebView) {

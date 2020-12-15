@@ -11,7 +11,7 @@ import uz.ssd.canvas.R
 import uz.ssd.canvas.base.BaseActivity
 import uz.ssd.canvas.osago.data.Policy
 
-class MainActivity2 : BaseActivity() {
+class RedDoc1 : BaseActivity() {
 
     override val layoutRes: Int = R.layout.activity_main
     private lateinit var policy: Policy
@@ -27,7 +27,7 @@ class MainActivity2 : BaseActivity() {
         btn2.setOnClickListener { download() }
 
         btn3.setOnClickListener {
-            startActivity(Intent(this, MainActivity3::class.java))
+            startActivity(Intent(this, RedDoc2::class.java))
         }
         btn3.text = "Osago Red Doc2"
     }
@@ -40,8 +40,8 @@ class MainActivity2 : BaseActivity() {
                 "Insurer", "Tashkent"
         )
         webView.loadDataWithBaseURL(
-                "file:///android_asset/style2.css",
-                Html.html2(policy),
+                "file:///android_asset/redstyle1.css",
+                Html.redHtml1(policy),
                 "text/html",
                 "UTF-8",
                 null

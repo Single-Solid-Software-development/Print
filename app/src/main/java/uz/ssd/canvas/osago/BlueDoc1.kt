@@ -7,7 +7,6 @@ import android.webkit.CookieManager
 import android.webkit.WebSettings
 import android.webkit.WebStorage
 import android.webkit.WebView
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import uz.ssd.canvas.Html.DESKTOP_USER_AGENT
 import uz.ssd.canvas.Html.htmlCss
@@ -15,7 +14,7 @@ import uz.ssd.canvas.Html.htmlString
 import uz.ssd.canvas.R
 import uz.ssd.canvas.base.BaseActivity
 
-class MainActivity0 : BaseActivity() {
+class BlueDoc1 : BaseActivity() {
 
     override val layoutRes: Int = R.layout.activity_main
 
@@ -29,7 +28,7 @@ class MainActivity0 : BaseActivity() {
         btn.setOnClickListener { createWebPagePrint(webView) }
         btn2.setOnClickListener { download() }
         btn3.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, BlueDoc2::class.java))
         }
         btn3.text = "Osago Blue Doc2"
     }

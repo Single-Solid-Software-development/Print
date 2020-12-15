@@ -13,7 +13,6 @@ object Html {
     const val htmlCss = "http://project.webforte.uz/pdf2html/style.css"
     const val DESKTOP_USER_AGENT =
             "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.2049.0 Safari/537.36"
-    const val day = "6365030"
     const val htmlString = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +22,7 @@ object Html {
 	<meta http-equiv="Pragma" content="no-cache" />
 	<meta http-equiv="Expires" content="0" />
 	<link rel="stylesheet" href="fonts/stylesheet.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bluestyle2.css">
     <title>Pdf to Html</title>
 </head>
 <body>
@@ -108,14 +107,14 @@ object Html {
 </html>"""
 
 
-    fun html1(insurance: Insurance): String {
+    fun blueHtml2(insurance: Insurance): String {
         return """<!DOCTYPE html>
 <html lang="">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Blue document 2</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bluestyle2.css">
 </head>
 <body class="document">
 <div class="page">
@@ -174,14 +173,14 @@ object Html {
 """
     }
 
-    fun html2(policy: Policy): String {
+    fun redHtml1(policy: Policy): String {
         return """<!DOCTYPE html>
 <html lang="">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Blue document 2</title>
-  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="redstyle1.css">
 </head>
 <body class="document">
 <div class="page">
@@ -234,7 +233,7 @@ object Html {
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <title>Blue document 2</title>
-   <link rel="stylesheet" href="style3.css">
+   <link rel="stylesheet" href="redstyle2.css">
  </head>
  <body class="document">
  <div class="page">
@@ -325,14 +324,14 @@ object Html {
  """
      }*/
 
-    fun html3(relative: Relative): String {
+    fun redHtml2(relative: Relative): String {
         return """<!DOCTYPE html>
 <html lang="">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Red Document 2</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="redstyle2.css">
 </head>
 <body class="document">
 <div class="page">
@@ -410,7 +409,6 @@ object Html {
   </table>
 </div>
 <script type="text/javascript">
-  // window.print();
 </script>
 </body>
 </html>
