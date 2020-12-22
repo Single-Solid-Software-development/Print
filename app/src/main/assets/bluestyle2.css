@@ -200,9 +200,26 @@ td {
 .with_numbers{
     width: 25%;
     margin-left: auto;
+    border-bottom: 0;
+    font-size: 10px;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: auto;
+    padding-top: 10px;
 }
 .with_words {
     width: 48%;
+    border-bottom: 0;
+    font-size: 10px;
+    text-align: center;
+}
+
+.tdbottom{
+    border-bottom: 1px solid black;
+}
+.tdright{
+    border-right: 0;
+    text-align: center;
 }
 .body_space {
     height: 144px;
@@ -210,75 +227,113 @@ td {
 .regional_info {
     height: 200px;
 }
-.regional_info .region {
+.region {
     width: 24%;
+    text-align: justify;
+    padding: 5px;
+    font-size: 10px;
 }
-.regional_info .region_unit {
+.region_unit {
     width: 30.5%;
+    text-align: justify;
+    padding: 5px;
+    font-size: 10px;
+
 }
 .regional_info .addresses {
     width: 45.4%;
+    text-align: justify;
+    padding: 5px;
+    font-size: 10px;
 }
 .series_info {
-    height: 31px;
+    margin-top: 4px;
+    height: 17px;
+    position: relative;
 }
 .series, .number {
-    height: 20px;
+    /* height: 40%; */
+    /* margin-top: 7px; */
 }
-.state_series, .state_number {
+.state_series{
+    position: absolute;
+    right: 52px;
+    top: 12px;
+}
+.state_number {
+    position: absolute;
     margin-top: auto;
-    height: 18px;
+    right: 0px;
+    top: 12px;
 }
 .series {
     width: 32px;
     margin-left: 44px;
+    font-size: 10px;
+
 }
 .number {
     width: 49px;
     margin-left: 15px;
+    font-size: 10px;
+
 }
 .state_series {
     width: 6.5%;
     margin-left: auto;
     margin-right: 14px;
+    font-size: 10px;
+
 }
 .state_number{
     width: 10.5%;
+    font-size: 10px;
 }
 .comment {
-    height: 75px;
+    font-size: 10px;
+    margin-top: 10px;
 }
 .comment td {
     width: 76.7%;
-    height: 14px;
+    font-style: 10px;
+    height: 17px;
     margin-left: auto;
 }
 .delegate_name {
-    height: 16px;
+    height: 17px;
+    margin-top: 60px;
+    font-size: 10px;
 }
 .delegate_name td {
-    width: 22.9%;
+    width: 30%;
     margin-left: 70px;
 }
 .date {
-    height: 34px;
+    margin-top: 17px;
 }
 .date td {
     margin-top: auto;
-    height: 40%;
+    height: 38%;
 }
 .date .day {
     width: 33px;
     margin-left: auto;
     margin-right: 10px;
+    height: 17px;
+    text-align: center;
 }
 .date .month {
     width: 86px;
     margin-right: 15px;
+    height: 17px;
+    text-align: center;
+
 }
 .date .year {
     width: 6.2%;
     margin-right: 20px;
+    height: 17px;
+
 }
 .time {
     height: 23px;
@@ -288,11 +343,14 @@ td {
     margin-top: auto;
 }
 .time .hour {
-    width: 20%;
+    width: 14%;
     margin-left: auto;
-    margin-right: 33px;
+    margin-right: 30px;
+    text-align: center;
 }
 .time .minut {
     margin-right: 40px;
     width: 12.7%;
+    text-align: center;
+
 }

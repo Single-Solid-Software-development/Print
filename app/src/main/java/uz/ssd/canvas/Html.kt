@@ -179,13 +179,14 @@ object Html {
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Blue document 2</title>
+  <title>Blue document 1</title>
   <link rel="stylesheet" href="redstyle1.css">
 </head>
 <body class="document">
 <div class="page">
-  <table class="table_polis">
-    <tr class="tr_polis_date">
+  <table>
+    <tr class="top_space"></tr>
+    <tr class="validity">
       <td class="day1">${policy.day1}</td>
       <td class="month1">${policy.month1}</td>
       <td class="year1">${policy.year1}</td>
@@ -194,32 +195,40 @@ object Html {
       <td class="month2">${policy.month2}</td>
       <td class="year2">${policy.year2}</td>
     </tr>
-    <tr class="tr_insurer_details">
+    <tr class="insurer_name">
+      <td>${policy.fio}</td>
+    </tr>
+    <tr class="insurer_name" style="width: 25xp;">
+      <td>${policy.fio2}</td>
+    </tr>
+    <tr class="insured_name">
       <td class="name_details">${policy.insurerDetails}</td>
     </tr>
-    <tr class="tr_insured_details">
+    <tr class="insured_name">
       <td class="name_details">${policy.insuredDetails}</td>
     </tr>
-    <tr class="tr_phone">
+    <tr class="insured_phone">
       <td class="td_phone">${policy.phone}</td>
     </tr>
-     <tr class="tr_info_car">
+    <tr class="auto_info">
       <td class="model">${policy.model}</td>
       <td class="make_year">${policy.makeYear}</td>
       <td class="dvig_number">${policy.dvigNumber}</td>
       <td class="kuzov_number">${policy.kuzovNumber}</td>
       <td class="numbers">${policy.carNumber}</td>
     </tr>
-    <tr class="tr_insurer_work">
+    <tr class="insured_job">
       <td class="name_details">${policy.insurerWorkType}</td>
     </tr>
-    <tr class="tr_use_car_region">
+    <tr class="insured_job_add">
       <td class="name_details">${policy.useCarRegion}</td>
+    </tr>
+    <tr class="used_place">
+      <td>${policy.userPlace}</td>
     </tr>
   </table>
 </div>
 <script type="text/javascript">
-  // window.print();
 </script>
 </body>
 </html>

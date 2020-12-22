@@ -7,6 +7,8 @@ data class Policy(
     val day2: String,
     val month2: String,
     val year2: String,
+    val fio: String,
+    val fio2: String,
     val insurerDetails: String,
     val insuredDetails: String,
     val phone: String,
@@ -17,4 +19,5 @@ data class Policy(
     val carNumber: String,
     val insurerWorkType: String,
     val useCarRegion: String,
+    val userPlace: String,
 )

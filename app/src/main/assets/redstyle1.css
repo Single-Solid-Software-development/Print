@@ -150,7 +150,7 @@ table {
     /* You can only change the size, margins, orphans, widows and page breaks here */
 
     /* Paper size and page orientation */
-    size: A5 portrait;
+    size: A5;
 
     /* Margin per single side of the page */
     /*margin: 2cm;*/
@@ -169,112 +169,154 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 .page {
-   /*background: url("img/red_bg_1.png") no-repeat;*/
+    background: url("img/red_bg_1.png") no-repeat;
     background-size: cover;
 }
 table{
-    width: 99.5%;
+    width: 100.5%;
     height: 100%;
     margin: 0;
     padding: 0;
 }
-tr {
+.top_space {
     width: 100%;
-    margin: 0;
-    padding: 0;
+    height: 5.89cm;
+}
+.validity {
+    width: 100%;
+    height: 0.43cm;
     display: flex;
 }
-td {
-    width:100%;
-    height: 100%;
+.validity .day_from {
+    width: 30px;
+    padding: 0;
+    margin-left: 16px;
+    outline: none;
+    border: solid 1px;
+    background: none;
+    text-align: center;
+    font-size: 11px;
+
+
+}
+.validity .month_from {
+    width: 89px;
+    padding: 0;
+    margin-left: 8px;
+    border: solid 1px;
+    outline: none;
+    background: none;
+    text-align: center;
+    font-size: 11px;
+
+}
+.validity .year_from, .validity .year_to {
+    width: 24px;
+    padding: 0;
+    border: solid 1px;
+    outline: none;
+    margin-left: 13px;
+    background: none;
+    font-size: 11px;
+
+}
+.validity .day_to {
+    width: 30px;
+    padding: 0;
+    margin-left: 110.5px;
+    outline: none;
+    border: solid 1px;
+    text-align: center;
+    background: none;
+    font-size: 11px;
+
+}
+.validity .month_to {
+    width: 81px;
+    padding: 0;
+    margin-left: 8px;
+    border: solid 1px;
+    outline: none;
+    background: none;
+    text-align: center;
+    font-size: 11px;
+
+
+}
+.insurer_name, .insured_name {
+    width: 100%;
+    height: 36px;
+    display: flex;
+    font-size: 11px;
+
+}
+.insurer_name td, .insured_name td {
+    width: 100%;
+    height: 0.43cm;
+    margin-top: auto;
+    margin-left: 13px;
     border: solid 1px;
 }
-
-
-.table_polis {
-    margin-top: 225px;
-}
-.tr_polis_date {
-    height: 16px;
-    margin-left: 10px;
-}
-.day1 {
-    width: 7,1%;
-}
-.month1 {
-    width: 21,4%;
-}
-.year1 {
-    width: 7.1%;
-}
-.day2 {
-    width: 7,1%;
-}
-.month2 {
-    width: 21,4%;
-}
-.year2 {
-    width: 7.1%;
-}
-.date_space {
-    width: 21.4%;
-}
-
-.tr_insurer_details {
-    height: 16px;
-    margin-left: 10px;
-    margin-top: 20px;
-}
-.name_details {
+.insured_phone {
     width: 100%;
+    height: 60px;
+    display: flex;
+    letter-spacing: 20px;
+    font-size: 18px;
 }
-
-.tr_insured_details {
-    height: 16px;
-    margin-left: 10px;
-    margin-top: 55px;
+.insured_phone td {
+    width: 350px;
+    height: 30px;
+    border: solid 1px;
+    margin-top: auto;
+    margin-left: auto;
 }
-
-.tr_phone {
-    height: 16px;
-    margin-left: 10px;
-    margin-top: 70px;
+.auto_info {
+    width: 100%;
+    height: 123px;
+    display: flex;
+    text-align: center;
 }
-
-.td_phone {
-    margin-left: 130px;
+.auto_info td {
+    margin-top: auto;
+    height: 49px;
+    border: solid 1px;
 }
-
-.tr_info_car {
-    height: 16px;
-    margin-left: 4px;
-    margin-top: 85px;
+.auto_info .brand {
+    width: 117px;
+    margin-left: auto;
 }
-
-.model {
-    width: 24,8%;
+.auto_info .build_year {
+    width: 63px;
 }
-.make_year {
-    width: 13,8%;
+.auto_info .engine_id {
+    width: 91px;
 }
-.dvig_number {
-    width: 18,9%;
+.auto_info .carcase_id {
+    width: 106px;
 }
-.kuzov_number {
-    width: 21,8%;
+.auto_info .car_id {
+    width: 110px;
 }
-.numbers {
-    width: 22%;
+.insured_job {
+    width: 100%;
+    height: 47px;
+    display: flex;
 }
-
-.tr_insurer_work {
-    height: 16px;
-    margin-left: 4px;
-    margin-top: 60px;
+.insured_job td, .insured_job_add td, .used_place td{
+    width: 99%;
+    height: 0.43cm;
+    margin-top: auto;
+    margin-left: auto;
+    border: solid 1px;
 }
-
-.tr_use_car_region {
-    height: 16px;
-    margin-left: 4px;
-    margin-top: 90px;
+.insured_job_add {
+    width: 100%;
+    height: 36px;
+    display: flex;
+}
+.used_place {
+    width: 100%;
+    height: 70px;
+    display: flex;
 }

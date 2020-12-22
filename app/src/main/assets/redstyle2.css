@@ -170,7 +170,7 @@ input[type=number] {
 }
 
 .page {
-    /*background: url("img/red_bg_2.png") no-repeat;*/
+    background: url("img/red_bg_2.png") no-repeat;
     background-size: cover;
 }
 table {

@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -7,7 +8,8 @@
 
 @page {
     margin:0;
-    size: A5;
+     size: A5;
+
 }
 body{
     font-family: 'Times New Roman', serif;
@@ -16,7 +18,7 @@ body{
     padding: 0;
     height: 210mm;
     /* width: 148.5mm; */
-    /*background-image: url('images/bg1.jpg');*/
+     /*background-image: url('img/bg1.jpeg');*/
     background-size: cover;
     background-repeat: no-repeat;
     box-sizing: unset;
@@ -25,56 +27,56 @@ body{
 input{
     border: none;
     background: transparent;
-    outline: 1px solid black;
+    outline: 1px solid yellow;
     width: auto;
     position: absolute;
 }
 input[name=date_from__day]{
-    top: 29.5%;
+    top: 28.5%;
     left: 8.5%;
     max-width: .5cm;
 }
 input[name=date_from__month]{
-    top: 29.5%;
+    top: 28.5%;
     left: 15%;
     max-width: 2cm;
 }
 input[name=date_from__year]{
-    top: 29.5%;
+    top: 28.5%;
     left: 33%;
     max-width: .5cm;
 }
 input[name=date_to__day]{
-    top: 29.5%;
+    top: 28.5%;
     left: 57.5%;
     max-width: .5cm;
 }
 input[name=date_to__month]{
-    top: 29.5%;
+    top: 28.5%;
     left: 64%;
     max-width: 2cm;
 }
 input[name=date_to__year]{
-    top: 29.5%;
+    top: 28.5%;
     left: 81%;
     max-width: .5cm;
 }
 input[name=insurance_giver__company]{
-    top: 32.5%;
+    top: 31.5%;
     left: 8.5%;
     width: 12.5cm;
 }
 input[name=insurance_owner__fio]{
-    top: 36.5%;
+    top: 35.5%;
     left: 8.5%;
     width: 12.5cm;
 }
 .insurance_owner__phone{
     position: absolute;
-    top: 41.5%;
+    top: 40.5%;
     left: 31%;
     width: 11cm;
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
     font-family: Lato;
 }
 input[name=tranport_info__model]{
@@ -117,31 +119,31 @@ input[name=owner__transport_region]{
     font-size: 11px;
 }
 .family-item.item-1{
-    top: 74%;
+    top: 75%;
     left: 14%;
     width: 100%;
     min-height: 1cm;
 }
 .family-item.item-2{
-    top: 80.1%;
+    top: 81.1%;
     left: 14%;
     width: 100%;
     min-height: 1cm;
 }
 .family-item.item-3{
-    top: 86.1%;
+    top: 87.1%;
     left: 14%;
     width: 100%;
     min-height: 1cm;
 }
 .family-item.item-4{
-    top: 92.2%;
+    top: 93.2%;
     left: 14%;
     width: 100%;
     min-height: 1cm;
 }
 .family-item.item-5{
-    top: 98.4%;
+    top: 99.4%;
     left: 14%;
     width: 100%;
     min-height: 1cm;

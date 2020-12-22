@@ -35,9 +35,9 @@ class RedDoc1 : BaseActivity() {
     private fun download() {
         policy = Policy(
                 "30", "November", "20", "30", "November", "20",
-                "Azizov Aziz", "Azizov Aziz", "998999999999",
+                "Azizov Aziz", "Azizov Aziz", "Detail","detail","998999999999",
                 "Cobalt", "2019", "123456", "123456", "AA534",
-                "Insurer", "Tashkent"
+                "Insurer", "Tashkent","Gorkiy"
         )
         webView.loadDataWithBaseURL(
                 "file:///android_asset/redstyle1.css",
