@@ -99,7 +99,7 @@ p + p {
 a {
     /* Prevent colorization or decoration */
     text-decoration: none;
-    color: white;
+    color: black;
 }
 /* For tables in the document */
 table {
@@ -143,7 +143,7 @@ table {
     min-height: 210mm;
 
     /* Reflect the actual page margin/padding on paper in the screen rendering (must match margin from @page rule) */
-    padding: 0.90cm;
+    padding: 0.50cm;
 }
 /* Use CSS Paged Media to switch from continuous documents to sheet-like documents with separate pages */
 @page {
@@ -186,10 +186,10 @@ tr {
 }
 td {
     height: 100%;
-    /*border: solid 1px;*/
+    border: solid 1px;
 }
 .top_space {
-    height: 31px;
+    height: 40px;
 }
 .insurer_sum, .discount_award {
     height: 43px;
@@ -205,24 +205,25 @@ td {
     text-align: center;
     vertical-align: middle;
     margin-top: auto;
-    padding-top: 10px;
+    padding-top: 7px;
 }
 .with_words {
     width: 48%;
     border-bottom: 0;
     font-size: 10px;
     text-align: center;
+    padding-top: 6px;
 }
 
 .tdbottom{
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
 }
 .tdright{
     border-right: 0;
     text-align: center;
 }
 .body_space {
-    height: 144px;
+    height: 150px;
 }
 .regional_info {
     height: 200px;
@@ -231,23 +232,26 @@ td {
     width: 24%;
     text-align: justify;
     padding: 5px;
-    font-size: 10px;
+    font-size: 12px;
+    text-align: center;
 }
 .region_unit {
     width: 30.5%;
     text-align: justify;
     padding: 5px;
-    font-size: 10px;
+    font-size: 12px;
+    text-align: center;
 
 }
 .regional_info .addresses {
     width: 45.4%;
     text-align: justify;
     padding: 5px;
-    font-size: 10px;
+    font-size: 12px;
+    text-align: center;
 }
 .series_info {
-    margin-top: 4px;
+    margin-top: 7px;
     height: 17px;
     position: relative;
 }
@@ -268,7 +272,7 @@ td {
 }
 .series {
     width: 32px;
-    margin-left: 44px;
+    margin-left: 35px;
     font-size: 10px;
 
 }
@@ -298,6 +302,7 @@ td {
     font-style: 10px;
     height: 17px;
     margin-left: auto;
+    margin-top: 3px;
 }
 .delegate_name {
     height: 17px;
