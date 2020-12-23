@@ -99,7 +99,7 @@ p + p {
 a {
     /* Prevent colorization or decoration */
     text-decoration: none;
-    color: black;
+    color: white;
 }
 /* For tables in the document */
 table {
@@ -186,7 +186,7 @@ tr {
 }
 td {
     height: 100%;
-    border: solid 1px;
+    /*border: solid 1px;*/
 }
 .top_space {
     height: 31px;
@@ -215,7 +215,7 @@ td {
 }
 
 .tdbottom{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
 }
 .tdright{
     border-right: 0;
