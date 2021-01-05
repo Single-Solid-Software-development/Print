@@ -179,7 +179,7 @@ object Html {
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Blue document 1</title>
+  <title>Red Document 1</title>
   <link rel="stylesheet" href="redstyle1.css">
 </head>
 <body class="document">
@@ -188,7 +188,7 @@ object Html {
     <tr class="top_space"></tr>
     <tr class="validity">
       <td class="day1">${policy.day1}</td>
-      <td class="month1">${policy.month1}</td>
+      <td class="month_from">${policy.month1}</td>
       <td class="year1">${policy.year1}</td>
       <td class="date_space"></td>
       <td class="day2">${policy.day2}</td>
@@ -202,26 +202,26 @@ object Html {
       <td>${policy.fio2}</td>
     </tr>
     <tr class="insured_name">
-      <td class="name_details">${policy.insurerDetails}</td>
+      <td>${policy.insurerDetails}</td>
     </tr>
     <tr class="insured_name">
-      <td class="name_details">${policy.insuredDetails}</td>
+      <td>${policy.insuredDetails}</td>
     </tr>
     <tr class="insured_phone">
-      <td class="td_phone">${policy.phone}</td>
+      <td>${policy.phone}</td>
     </tr>
     <tr class="auto_info">
-      <td class="model">${policy.model}</td>
-      <td class="make_year">${policy.makeYear}</td>
-      <td class="dvig_number">${policy.dvigNumber}</td>
-      <td class="kuzov_number">${policy.kuzovNumber}</td>
-      <td class="numbers">${policy.carNumber}</td>
+      <td class="brand">${policy.model}</td>
+      <td class="build_year">${policy.makeYear}</td>
+      <td class="engine_id">${policy.dvigNumber}</td>
+      <td class="carcase_id">${policy.kuzovNumber}</td>
+      <td class="car_id">${policy.carNumber}</td>
     </tr>
     <tr class="insured_job">
-      <td class="name_details">${policy.insurerWorkType}</td>
+      <td>${policy.insurerWorkType}</td>
     </tr>
     <tr class="insured_job_add">
-      <td class="name_details">${policy.useCarRegion}</td>
+      <td>${policy.useCarRegion}</td>
     </tr>
     <tr class="used_place">
       <td>${policy.userPlace}</td>

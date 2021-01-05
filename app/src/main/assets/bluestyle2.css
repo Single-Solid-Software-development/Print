@@ -188,7 +188,7 @@ tr {
 }
 td {
     height: 100%;
-    border: solid 1px;
+
 }
 .top_space {
     height: 42px;
@@ -256,24 +256,14 @@ td {
     text-align: center;
 }
 .series_info {
-    margin-top: 13px;
+    margin-top: 15px;
     height: 17px;
     position: relative;
 }
 .series, .number {
     /* height: 40%; */
     /* margin-top: 7px; */
-}
-.state_series{
-    position: absolute;
-    right: 64px;
-    top: 9px;
-}
-.state_number {
-    position: absolute;
-    margin-top: auto;
-    right: 14px;
-    top: 9px;
+    text-align: center;
 }
 .series {
     width: 32px;
@@ -292,15 +282,29 @@ td {
     margin-left: auto;
     margin-right: 14px;
     font-size: 11px;
-
+    position: absolute;
+    right: 64px;
+    top: 9px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .state_number{
     width: 10.5%;
     font-size: 11px;
+    position: absolute;
+    margin-top: auto;
+    right: 14px;
+    top: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .comment {
     font-size: 10px;
     margin-top: 12px;
+    position: relative;
 }
 .comment td {
     width: 76.7%;
@@ -308,22 +312,34 @@ td {
     height: 17px;
     margin-left: auto;
     margin-top: -7px;
+    position: absolute;
+    top: -1px;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
 }
 .delegate_name {
     height: 17px;
-    margin-top: 62px;
+    margin-top: 50px;
     font-size: 10px;
+    position: relative;
 }
 .delegate_name td {
     width: 30%;
     margin-left: 70px;
+    position: absolute;
+    top: 22px;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
 }
 .date {
-    margin-top: 21px;
+    position: relative;
 }
 .date td {
     margin-top: auto;
     height: 38%;
+
 }
 .date .day {
     width: 33px;
@@ -331,22 +347,33 @@ td {
     margin-right: 10px;
     height: 17px;
     text-align: center;
+    position: absolute;
+    top: 48px;
 }
 .date .month {
     width: 86px;
     margin-right: 15px;
     height: 17px;
     text-align: center;
+    position: absolute;
+    top: 48px;
+    right: 62px;
+
 
 }
 .date .year {
     width: 6.2%;
     margin-right: 20px;
     height: 17px;
+    position: absolute;
+    top: 48px;
+    right: 10px;
 
 }
 .time {
     height: 23px;
+    margin-top: 52px;
+    position: relative;
 }
 .time td {
     height: 80%;
@@ -357,10 +384,16 @@ td {
     margin-left: auto;
     margin-right: 30px;
     text-align: center;
+    position: absolute;
+    left: 308px;
+    top: 15px;
 }
 .time .minut {
     margin-right: 40px;
     width: 12.7%;
     text-align: center;
+    position: absolute;
+    right: 0px;
+    top: 15px;
 
 }
