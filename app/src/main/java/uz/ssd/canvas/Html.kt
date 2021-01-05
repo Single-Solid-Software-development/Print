@@ -187,13 +187,12 @@ object Html {
   <table>
     <tr class="top_space"></tr>
     <tr class="validity">
-      <td class="day1">${policy.day1}</td>
-      <td class="month_from">${policy.month1}</td>
-      <td class="year1">${policy.year1}</td>
-      <td class="date_space"></td>
-      <td class="day2">${policy.day2}</td>
-      <td class="month2">${policy.month2}</td>
-      <td class="year2">${policy.year2}</td>
+      <td class="day_from">${policy.day1}</td>
+      <td class="month_from"> ${policy.month1}</td>
+      <td class="year_from">${policy.year1}</td>
+      <td class="day_to">${policy.day2}</td>
+      <td class="month_to">${policy.month2}</td>
+      <td class="year_to">${policy.year2}</td>
     </tr>
     <tr class="insurer_name">
       <td>${policy.fio}</td>

@@ -43,7 +43,6 @@ abstract class BaseActivity : AppCompatActivity() {
         WebStorage.getInstance().deleteAllData()
 
 
-
 //        // Clear all the cookies
         CookieManager.getInstance().removeAllCookies(null)
         CookieManager.getInstance().flush()
