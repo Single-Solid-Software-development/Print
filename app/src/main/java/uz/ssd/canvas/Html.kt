@@ -201,13 +201,13 @@ object Html {
       <td>${policy.fio2}</td>
     </tr>
     <tr class="insured_name">
-      <td>${policy.insurerDetails}</td>
+      <td style="margin-top: 21px">${policy.insurerDetails}</td>
     </tr>
     <tr class="insured_name">
-      <td>${policy.insuredDetails}</td>
+      <td style="margin-top: 23px">${policy.insuredDetails}</td>
     </tr>
     <tr class="insured_phone">
-      <td>${policy.phone}</td>
+      <td style="margin-top: 35px">${policy.phone}</td>
     </tr>
     <tr class="auto_info">
       <td class="brand">${policy.model}</td>
@@ -217,13 +217,13 @@ object Html {
       <td class="car_id">${policy.carNumber}</td>
     </tr>
     <tr class="insured_job">
-      <td>${policy.insurerWorkType}</td>
+      <td style="margin-top: 42px"> ${policy.insurerWorkType}</td>
     </tr>
     <tr class="insured_job_add">
-      <td>${policy.useCarRegion}</td>
+      <td style="margin-top: 32px">${policy.useCarRegion}</td>
     </tr>
     <tr class="used_place">
-      <td>${policy.userPlace}</td>
+      <td style="margin-top: 68px">${policy.userPlace}</td>
     </tr>
   </table>
 </div>

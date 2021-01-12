@@ -190,7 +190,7 @@ td {
     border: solid 1px;
 }
 .top_space {
-    height: 33px;
+    height: 25px;
 }
 .relatives, .relatives5 {
     height: 16px;
@@ -198,7 +198,7 @@ td {
 }
 .relatives2, .relatives3 {
     height: 15px;
-    font-size: 9px;
+    font-size: 10px;
 }
 .relatives4 {
     height: 15.5px;
@@ -206,10 +206,10 @@ td {
 }
 .relative_name {
     margin-left: auto;
-    width: 39.3%;
+    width: 40.3%;
 }
 .relative_licence {
-    width: 28.2%;
+    width: 29%;
 }
 .relative_level {
     width: 25.3%;
@@ -233,17 +233,17 @@ td {
     width: 20%;
     margin-left: auto;
     text-align: center;
-    font-size: 9px;
+    font-size: 10px;
 }
 .with_words {
     width: 42%;
-    font-size: 8px;
+    font-size: 10px;
 }
 .regional_info {
     height: 194px;
 }
 .region {
-    width: 23.7%;
+    width: 24.7%;
     margin-left: auto;
     font-size: 9px;
     padding: 3px;
@@ -255,24 +255,31 @@ td {
     padding: 3px;
 }
 .addresses {
-    width: 45%;
+    width: 46%;
     font-size: 9px;
     padding: 3px;
 }
 .series_info {
     height: 26px;
+    position: relative;
+}
+.series_info td{
+    position: absolute;
 }
 .series_info .series {
     width: 40px;
     height: 55%;
     font-size: 10px;
     margin-left: 45px;
+    top: 22px;
 }
 .series_info .number {
     width: 58px;
     height: 55%;
     font-size: 10px;
     margin-left: 10px;
+    left: 85px;
+    top: 22px;
 }
 .series_info .state_series {
     width: 8%;
@@ -281,64 +288,90 @@ td {
     margin-left: auto;
     margin-top: auto;
     font-size: 10px;
+    top: 32px;
+    right: 60px;
 }
 .series_info .state_number {
     width: 12%;
     height: 55%;
     margin-top: auto;
     font-size: 10px;
+    right: 0;
+    top: 32px;
 
 }
 .comment {
     height: 16px;
     font-size: 9px;
+    position: relative;
 }
 .comment td {
     width: 75%;
     margin-left: auto;
+    position: absolute;
+    right: 0;
+    top: 22px;
 }
 .delegate_name {
     height: 78px;
-    font-size: 9px;
+    font-size: 10px;
+    position: relative;
 }
 .delegate_name td {
     width: 25%;
     height: 20%;
     margin-top: auto;
     margin-left: 77px;
+    position: absolute;
+    bottom: -25px;
 }
 .date {
     height: 34px;
+    position: relative;
 }
 .date td {
     margin-top: auto;
     height: 16px;
+    position: absolute;
 }
 .date .day {
     width: 27px;
     margin-left: auto;
     margin-right: 7px;
+    right: 130px;
+    bottom: -22px;
 }
 .date .month {
     width: 75px;
     margin-right: 12px;
     text-align: center;
+    right: 45px;
+    bottom: -22px;
 }
 .date .year {
     width: 25px;
     margin-right: 18px;
+    right: 0;
+    bottom: -22px;
 }
 .time {
     height: 24px;
+    position: relative;
 }
 .time .hour {
     width: 50px;
     margin-left: auto;
     margin-right: 27px;
     text-align: center;
+    bottom: -22px;
+    position: absolute;
+    right: 87px;
 }
 .time .minut {
     width: 52px;
     margin-right: 34px;
     text-align: center;
+    bottom: -22px;
+    position: absolute;
+    right: 0;
 }

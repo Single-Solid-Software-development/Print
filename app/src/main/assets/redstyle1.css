@@ -1,3 +1,8 @@
+/*!
+ * HTML-Sheets-of-Paper (https://github.com/delight-im/HTML-Sheets-of-Paper)
+ * Copyright (c) delight.im (https://www.delight.im/)
+ * Licensed under the MIT License (https://opensource.org/licenses/MIT)
+ */
 
 html, body {
     /* Reset the document's margin values */
@@ -5,7 +10,7 @@ html, body {
     /* Reset the document's padding values */
     padding: 0;
     /* Use the platform's native font as the default */
-    font-family: 'Times New Roman', serif;
+    font-family: "Roboto", -apple-system, "San Francisco", "Segoe UI", "Helvetica Neue", sans-serif;
     /* Define a reasonable base font size */
     font-size: 9pt;
 
@@ -215,6 +220,9 @@ table{
     font-size: 11px;
 
 }
+.validity .year_to{
+    margin-left: 28px;
+}
 .validity .day_to {
     width: 30px;
     padding: 0;
@@ -224,7 +232,10 @@ table{
     text-align: center;
     background: none;
     font-size: 11px;
-
+}
+.validity td{
+    display: flex;
+    align-items: flex-end;
 }
 .validity .month_to {
     width: 81px;
@@ -251,6 +262,8 @@ table{
     margin-top: auto;
     margin-left: 13px;
     border: solid 1px;
+    display: flex;
+    align-items: flex-end;
 }
 .insured_phone {
     width: 100%;
@@ -260,11 +273,13 @@ table{
     font-size: 18px;
 }
 .insured_phone td {
-    width: 350px;
+    width: 363px;
     height: 30px;
     border: solid 1px;
     margin-top: auto;
     margin-left: auto;
+    display: flex;
+    align-items: center;
 }
 .auto_info {
     width: 100%;
@@ -273,13 +288,12 @@ table{
     text-align: center;
 }
 .auto_info td {
-    margin-top: auto;
+    margin-top: 80px;
     height: 49px;
     border: solid 1px;
 }
 .auto_info .brand {
     width: 117px;
-    margin-left: auto;
 }
 .auto_info .build_year {
     width: 63px;
@@ -315,3 +329,4 @@ table{
     height: 70px;
     display: flex;
 }
+
