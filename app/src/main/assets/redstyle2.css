@@ -209,10 +209,10 @@ td {
 }
 .relative_name {
     margin-left: auto;
-    width: 40.3%;
+    width: 39.6%;
 }
 .relative_licence {
-    width: 29%;
+    width: 28%;
 }
 .relative_level {
     width: 26.5%;
@@ -239,7 +239,7 @@ td {
     font-size: 10px;
 }
 .with_words {
-    width: 43%;
+    width: 44%;
     font-size: 10px;
 }
 .regional_info {
@@ -249,6 +249,8 @@ td {
 .regional_info td{
     top: 12px;
     position: absolute;
+    font-size: 11px;
+    padding-top: 10px;
 }
 .region {
     width: 24.7%;
@@ -259,7 +261,7 @@ td {
 }
 .region_unit {
     width: 30.3%;
-    font-size: 9px;
+    font-size: 11px;
     padding: 3px;
     left: 121px;
 }
@@ -281,7 +283,8 @@ td {
     height: 55%;
     font-size: 10px;
     margin-left: 38px;
-    top: 24px;
+    top: 22px;
+    text-align: center;
 }
 .series_info .number {
     width: 58px;
@@ -289,7 +292,8 @@ td {
     font-size: 10px;
     margin-left: 4px;
     left: 85px;
-    top: 24px;
+    top: 22px;
+    text-align: center;
 }
 .series_info .state_series {
     width: 8%;
@@ -300,6 +304,7 @@ td {
     font-size: 10px;
     top: 34px;
     right: 56px;
+    text-align: center;
 }
 .series_info .state_number {
     width: 12%;
@@ -308,6 +313,7 @@ td {
     font-size: 10px;
     right: -5px;
     top: 34px;
+    text-align: center;
 
 }
 .comment {
@@ -333,7 +339,7 @@ td {
     margin-top: auto;
     margin-left: 72px;
     position: absolute;
-    bottom: -28px;
+    bottom: -26px;
 }
 .date {
     height: 34px;
@@ -349,20 +355,20 @@ td {
     margin-left: auto;
     margin-right: 7px;
     right: 130px;
-    bottom: -32px;
+    bottom: -29px;
 }
 .date .month {
     width: 75px;
     margin-right: 12px;
     text-align: center;
     right: 42px;
-    bottom: -32px;
+    bottom: -29px;
 }
 .date .year {
     width: 25px;
     margin-right: 18px;
     right: -7px;
-    bottom: -32px;
+    bottom: -29px;
 }
 .time {
     height: 20px;

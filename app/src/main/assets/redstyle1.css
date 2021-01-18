@@ -225,7 +225,7 @@ td{
 
 }
 .validity .year_to{
-    margin-left: 28px;
+    margin-left: 23px;
 }
 .validity .day_to {
     width: 30px;
@@ -274,11 +274,11 @@ td{
     width: 100%;
     height: 60px;
     display: flex;
-    letter-spacing: 20px;
+    letter-spacing: 22px;
     font-size: 18px;
 }
 .insured_phone td {
-    width: 352px;
+    width: 350px;
     height: 30px;
     border: solid 1px;
     margin-top: auto;
@@ -301,7 +301,7 @@ td{
     width: 125px;
 }
 .auto_info .build_year {
-    width: 63px;
+    width: 68px;
 }
 .auto_info .engine_id {
     width: 91px;
