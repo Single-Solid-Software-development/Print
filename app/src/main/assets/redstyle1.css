@@ -169,7 +169,7 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 .page {
-    /*background: url("img/red_bg_1.png") no-repeat;*/
+    background: url("img/red_bg_1.png") no-repeat;
     background-size: cover;
 }
 table{
@@ -225,7 +225,7 @@ td{
 
 }
 .validity .year_to{
-    margin-left: 23px;
+    margin-left: 22px;
 }
 .validity .day_to {
     width: 30px;
@@ -278,7 +278,7 @@ td{
     font-size: 18px;
 }
 .insured_phone td {
-    width: 350px;
+    width: 352px;
     height: 30px;
     border: solid 1px;
     margin-top: auto;
@@ -291,26 +291,32 @@ td{
     height: 123px;
     display: flex;
     text-align: center;
+    position: relative;
 }
 .auto_info td {
     margin-top: 80px;
     height: 49px;
     border: solid 1px;
+    position: absolute;
 }
 .auto_info .brand {
     width: 125px;
 }
 .auto_info .build_year {
     width: 68px;
+    left: 125px;
 }
 .auto_info .engine_id {
     width: 91px;
+    left: 193px;
 }
 .auto_info .carcase_id {
     width: 106px;
+    left: 284px;
 }
 .auto_info .car_id {
     width: 110px;
+    left: 390px;
 }
 .insured_job {
     width: 100%;

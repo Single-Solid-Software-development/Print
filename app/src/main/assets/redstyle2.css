@@ -170,7 +170,7 @@ input[type=number] {
 }
 
 .page {
-    /*background: url("img/red_bg_2.png") no-repeat;*/
+    background: url("img/red_bg_2.png") no-repeat;
     background-size: cover;
 }
 table {
@@ -208,20 +208,35 @@ td {
     font-size: 9px;
 }
 .relative_name {
-    margin-left: auto;
-    width: 39.6%;
+    margin-left: 29px;
+    width: 40.6%;
+    padding-left: 3px;
 }
 .relative_licence {
     width: 28%;
+    padding-left: 3px;
 }
 .relative_level {
     width: 26.5%;
+    padding-left: 3px;
 }
 .body_space {
     height: 50px;
 }
 .body_space2 {
     height: 109px;
+}
+.position{
+    position: relative;
+}
+.position td{
+    position: absolute;
+}
+.position td:nth-child(1){
+    left: 185px;
+}
+.position td:nth-child(2){
+    right: -6px;
 }
 .insurer_sum {
     height: 23.5px;
@@ -260,7 +275,7 @@ td {
 
 }
 .region_unit {
-    width: 30.3%;
+    width: 31%;
     font-size: 11px;
     padding: 3px;
     left: 121px;
@@ -269,7 +284,7 @@ td {
     width: 46%;
     font-size: 9px;
     padding: 3px;
-    left: 270px;
+    left: 274px;
 }
 .series_info {
     height: 26px;
@@ -356,6 +371,7 @@ td {
     margin-right: 7px;
     right: 130px;
     bottom: -29px;
+    text-align: center;
 }
 .date .month {
     width: 75px;
@@ -369,6 +385,7 @@ td {
     margin-right: 18px;
     right: -7px;
     bottom: -29px;
+    text-align: center;
 }
 .time {
     height: 20px;
