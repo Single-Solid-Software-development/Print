@@ -26,6 +26,7 @@ class RedDoc1 : BaseActivity() {
         btn.setOnClickListener { createWebPagePrint(webView) }
         btn2.setOnClickListener { download() }
 
+        toolbar.setTitle("RED Doc 1")
         btn3.setOnClickListener {
             startActivity(Intent(this, RedDoc2::class.java))
         }

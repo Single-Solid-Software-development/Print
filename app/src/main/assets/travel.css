@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@page {
+    margin: 0;
+    size: A4;
+}
+.page {
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 4px 5px rgba(75, 75, 75, 0.2);
+    outline: 0;
+    height: 29.7cm;
+    width: 21cm;
+    /* padding: 15px; */
+    
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.layout{
+    margin: 0 auto;
+}
+.header{
+    margin-bottom: 20px;
+}
+.content{
+    padding-top: 10px;
+    background-image: url(./img/F_36_Travel_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 364px;
+
+}
+table{
+    width: 97%;
+    line-height: 0.9;
+    margin-top: 0;
+    margin: 0 auto;
+}
+table, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td{
+    font-size: 10px; 
+    margin: 0;
+    padding: 3px;
+}
+p{
+    margin: 0 auto;
+    padding: 0;
+    width: 580px;
+    word-spacing: 2px;
+    line-height: 1;
+    font-size: 12px;
+}
+#specific, #last_spec{
+    font-size: 8.5px;
+    text-align: justify;
+}

@@ -27,7 +27,7 @@ class Kasko1 : BaseActivity() {
             startActivity(Intent(this, BlueDoc1::class.java))
         }
         btn3.text = "Osago Blue Doc"
-
+        toolbar.setTitle("Kasko")
         btn.setOnClickListener { createWebPagePrint(webView) }
         btn2.setOnClickListener { download() }
     }

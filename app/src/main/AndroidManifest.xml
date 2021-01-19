@@ -20,6 +20,7 @@
 
         <activity android:name=".osago.BlueDoc2"/>
         <activity android:name=".osago.RedDoc1"/>
+        <activity android:name=".Travel"/>
         <activity android:name=".osago.RedDoc2"/>
         <activity android:name=".kasko.Kasko1"/>
     </application>

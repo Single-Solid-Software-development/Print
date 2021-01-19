@@ -689,4 +689,303 @@ object Html {
 </body>
 </html> """
     }
+
+    fun travel(): String{
+        return """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href="travel.css">
+</head>
+<body>
+    <div class="page">
+        <div class="layout">
+            <div class="content">
+                <div class="header">
+                    <p>«Uzbekinvest» NEIIC. Adress: 6, Chopon ota, Tashkent, 100097, Republic of Uzbekistan</p>
+                    <p>Phone: 71-207-60-00/ Fax: 71-235-94-09; email:travel@uzbekinvest.uz; <br/>www.uzbekinvest.uz, www.insurance.uz</p>
+                    <p>TRAVEL INSURANCE POLICY / ПОЛИС СТРАХОВАНИЯ ЛИЦ, ВЫЕЗЖАЮЩИХ ЗА РУБЕЖ</p>
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <td><b>POLICY HOLDER/NAME</b><br/>Страхователь(Ф.И.О./Наименование)</td>
+                            <td colspan="4"><b>ADDRESS/PHONE OF THE POLICE HOLDER</b><br/>Адрес/№ телефона Страхователя</td>
+                        </tr>
+                        <tr>
+                            <td><span>KODIROV RAKHMATILLAKHON</span></td>
+                            <td colspan="4"><span>/+998 (90) 321-97-72</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="heading_height"><b>LAST NAME, FIRST NAME OF INSURED PERSON</b><br/>Застрахованное лицо</td>
+                            <td class="heading_height"><b>PASSPORT#</b><br/>№ Паспорта</td>
+                            <td class="heading_height"><b>DATE OF BIRTHDAY</b><br/>Дата рождения</td>
+                            <td class="heading_height" style="width: 120px"><b>NUMBER OF DAYS</b><br/>Количество дней</td>
+                            <td class="heading_height" style="width: 120px"><span>91<span></span></td>
+                        </tr>
+                        <tr>
+                            <td><span>KODIROV RAKHMATILLAKHON</span></td>
+                            <td><span>FA</span> <span>1301427</span></td>
+                            <td><span>21.02.2002</span></td>
+                            <td rowspan="2"><b>PERIOD OF INSURANCE</b><br/>Период страхования</td>
+                            <td>from/с <span>16.12.2020</span></td>  
+                            
+                        </tr>
+                        <tr>
+                            <td><span>KODIROV RAKHMATILLAKHON</span></td>
+                            <td><span>FA</span> <span>1301427</span></td>
+                            <td><span>21.02.2002</span></td>
+                            <td>to/по <span>31.03.2021</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>KODIROV RAKHMATILLAKHON</span></td>
+                            <td><span>FA</span> <span>1301427</span></td>
+                            <td><span>21.02.2002</span></td>
+                            <td rowspan="2"><b>DATA OF ISSUE</b><br/>Дата выдачи</td>
+                            <td rowspan="2"><span>20.11.2020</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>KODIROV RAKHMATILLAKHON</span></td>
+                            <td><span>FA</span> <span>1301427</span></td>
+                            <td><span>20.11.2020</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>KODIROV RAKHMATILLAKHON</span></td>
+                            <td><span>FA</span> <span>1301427</span></td>
+                            <td><span>21.02.2002</span></td>
+                            <td rowspan="4"><b>SIGNATURE OF INSURER</b>/<br/>Подпись представителя Страховщика</td>
+                            <td rowspan="4"></td>
+                        </tr>
+                        <tr>
+                            <td><b>PURPOSE OF THE TRIP/</b>Цель поездки</td>
+                            <td colspan="2"><span></span>other</td>
+                        </tr>
+                        <tr>
+                            <td><b>INSURANCE PROGRAM/</b>Программа страхования</td>
+                            <td colspan="2"><b>SUM INSURED/</b>Сумма покрытия</td>   
+                        </tr>
+                        <tr>
+                            <td><span>Standart</span></td>
+                            <td colspan="2"><span>60 000€ (Зона 1)</span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><b>HOST COUNTRY/</b>Страна поездки</td>
+                            <td colspan="2"><b>INSURANCE PREMIUM/</b>Страховая премия</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><span>LATVIA, SCHENGEN</span></td>
+                            <td colspan="2"><span>438 747,00</span></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" colspan="3" id="specific"><b>I hereby declare that the Insured persons are healthy, have no medical contraindications to the trip, do not currently undergo an intensive care course and do
+                                not need urgent medical treatment. I have agree with the insurance Rules. Insurance Rules was reseived./</b>Настоящим заявляю, что Застрахованные лица
+                                здоровы, не имеют медицинских противопоказаний для поездки, не проходят в настоящее время курс интенсивной терапии и не нуждаются в срочном
+                                медицинском лечении. С Правилами страхования ознакомлен и согласен. Полис и Правила страхования получил</td>
+                                <td colspan="2"><b>SIGNATURE POLICY HOLDER/</b>Подпись Страхователя</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 9px;"></td>
+                        </tr>
+                         <tr>
+                            <td colspan="5" id="last_spec"><b>EXPENSES LESS THAN 30 (THIRTY) EURO NOT REIMBURSED(CONDITIONAL FRANCHISE)!/</b>РАСХОДЫ МЕНЕЕ 30 (тридцати) ЕВРО НЕ ВОЗМЕЩАЮТСЯ (УСЛОВНАЯ ФРАНШИЗА)!</td>
+                         </tr>   
+                    </table>
+                </div>
+            </div>
+            
+            <div class="content">
+                <div class="header">
+                    <p>«Uzbekinvest» NEIIC. Adress: 6, Chopon ota, Tashkent, 100097, Republic of Uzbekistan</p>
+                    <p>Phone: 71-207-60-00/ Fax: 71-235-94-09; email:travel@uzbekinvest.uz; <br/>www.uzbekinvest.uz, www.insurance.uz</p>
+                    <p>TRAVEL INSURANCE POLICY / ПОЛИС СТРАХОВАНИЯ ЛИЦ, ВЫЕЗЖАЮЩИХ ЗА РУБЕЖ</p>
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <td><b>POLICY HOLDER/NAME</b><br/>Страхователь(Ф.И.О./Наименование)</td>
+                            <td colspan="4"><b>ADDRESS/PHONE OF THE POLICE HOLDER</b><br/>Адрес/№ телефона Страхователя</td>
+                        </tr>
+                        <tr>
+                            <td><span>KODIROV RAKHMATILLAKHON</span></td>
+                            <td colspan="4"><span>/+998 (90) 321-97-72</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="heading_height"><b>LAST NAME, FIRST NAME OF INSURED PERSON</b><br/>Застрахованное лицо</td>
+                            <td class="heading_height"><b>PASSPORT#</b><br/>№ Паспорта</td>
+                            <td class="heading_height"><b>DATE OF BIRTHDAY</b><br/>Дата рождения</td>
+                            <td class="heading_height" style="width: 120px"><b>NUMBER OF DAYS</b><br/>Количество дней</td>
+                            <td class="heading_height" style="width: 120px"><span>91<span></span></td>
+                        </tr>
+                        <tr>
+                            <td><span>KODIROV RAKHMATILLAKHON</span></td>
+                            <td><span>FA</span> <span>1301427</span></td>
+                            <td><span>21.02.2002</span></td>
+                            <td rowspan="2"><b>PERIOD OF INSURANCE</b><br/>Период страхования</td>
+                            <td>from/с <span>16.12.2020</span></td>  
+                            
+                        </tr>
+                        <tr>
+                            <td><span>KODIROV RAKHMATILLAKHON</span></td>
+                            <td><span>FA</span> <span>1301427</span></td>
+                            <td><span>21.02.2002</span></td>
+                            <td>to/по <span>31.03.2021</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>KODIROV RAKHMATILLAKHON</span></td>
+                            <td><span>FA</span> <span>1301427</span></td>
+                            <td><span>21.02.2002</span></td>
+                            <td rowspan="2"><b>DATA OF ISSUE</b><br/>Дата выдачи</td>
+                            <td rowspan="2"><span>20.11.2020</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>KODIROV RAKHMATILLAKHON</span></td>
+                            <td><span>FA</span> <span>1301427</span></td>
+                            <td><span>20.11.2020</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>KODIROV RAKHMATILLAKHON</span></td>
+                            <td><span>FA</span> <span>1301427</span></td>
+                            <td><span>21.02.2002</span></td>
+                            <td rowspan="4"><b>SIGNATURE OF INSURER</b>/<br/>Подпись представителя Страховщика</td>
+                            <td rowspan="4"></td>
+                        </tr>
+                        <tr>
+                            <td><b>PURPOSE OF THE TRIP/</b>Цель поездки</td>
+                            <td colspan="2"><span></span>other</td>
+                        </tr>
+                        <tr>
+                            <td><b>INSURANCE PROGRAM/</b>Программа страхования</td>
+                            <td colspan="2"><b>SUM INSURED/</b>Сумма покрытия</td>   
+                        </tr>
+                        <tr>
+                            <td><span>Standart</span></td>
+                            <td colspan="2"><span>60 000€ (Зона 1)</span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><b>HOST COUNTRY/</b>Страна поездки</td>
+                            <td colspan="2"><b>INSURANCE PREMIUM/</b>Страховая премия</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><span>LATVIA, SCHENGEN</span></td>
+                            <td colspan="2"><span>438 747,00</span></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" colspan="3" id="specific"><b>I hereby declare that the Insured persons are healthy, have no medical contraindications to the trip, do not currently undergo an intensive care course and do
+                                not need urgent medical treatment. I have agree with the insurance Rules. Insurance Rules was reseived./</b>Настоящим заявляю, что Застрахованные лица
+                                здоровы, не имеют медицинских противопоказаний для поездки, не проходят в настоящее время курс интенсивной терапии и не нуждаются в срочном
+                                медицинском лечении. С Правилами страхования ознакомлен и согласен. Полис и Правила страхования получил</td>
+                                <td colspan="2"><b>SIGNATURE POLICY HOLDER/</b>Подпись Страхователя</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 9px;"></td>
+                        </tr>
+                         <tr>
+                            <td colspan="5" id="last_spec"><b>EXPENSES LESS THAN 30 (THIRTY) EURO NOT REIMBURSED(CONDITIONAL FRANCHISE)!/</b>РАСХОДЫ МЕНЕЕ 30 (тридцати) ЕВРО НЕ ВОЗМЕЩАЮТСЯ (УСЛОВНАЯ ФРАНШИЗА)!</td>
+                         </tr>   
+                    </table>
+                </div>
+            </div>
+            <div class="content">
+                <div class="header">
+                    <p>«Uzbekinvest» NEIIC. Adress: 6, Chopon ota, Tashkent, 100097, Republic of Uzbekistan</p>
+                    <p>Phone: 71-207-60-00/ Fax: 71-235-94-09; email:travel@uzbekinvest.uz; <br/>www.uzbekinvest.uz, www.insurance.uz</p>
+                    <p>TRAVEL INSURANCE POLICY / ПОЛИС СТРАХОВАНИЯ ЛИЦ, ВЫЕЗЖАЮЩИХ ЗА РУБЕЖ</p>
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <td><b>POLICY HOLDER/NAME</b><br/>Страхователь(Ф.И.О./Наименование)</td>
+                            <td colspan="4"><b>ADDRESS/PHONE OF THE POLICE HOLDER</b><br/>Адрес/№ телефона Страхователя</td>
+                        </tr>
+                        <tr>
+                            <td><span>KODIROV RAKHMATILLAKHON</span></td>
+                            <td colspan="4"><span>/+998 (90) 321-97-72</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="heading_height"><b>LAST NAME, FIRST NAME OF INSURED PERSON</b><br/>Застрахованное лицо</td>
+                            <td class="heading_height"><b>PASSPORT#</b><br/>№ Паспорта</td>
+                            <td class="heading_height"><b>DATE OF BIRTHDAY</b><br/>Дата рождения</td>
+                            <td class="heading_height" style="width: 120px"><b>NUMBER OF DAYS</b><br/>Количество дней</td>
+                            <td class="heading_height" style="width: 120px"><span>91<span></span></td>
+                        </tr>
+                        <tr>
+                            <td><span>KODIROV RAKHMATILLAKHON</span></td>
+                            <td><span>FA</span> <span>1301427</span></td>
+                            <td><span>21.02.2002</span></td>
+                            <td rowspan="2"><b>PERIOD OF INSURANCE</b><br/>Период страхования</td>
+                            <td>from/с <span>16.12.2020</span></td>  
+                            
+                        </tr>
+                        <tr>
+                            <td><span>KODIROV RAKHMATILLAKHON</span></td>
+                            <td><span>FA</span> <span>1301427</span></td>
+                            <td><span>21.02.2002</span></td>
+                            <td>to/по <span>31.03.2021</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>KODIROV RAKHMATILLAKHON</span></td>
+                            <td><span>FA</span> <span>1301427</span></td>
+                            <td><span>21.02.2002</span></td>
+                            <td rowspan="2"><b>DATA OF ISSUE</b><br/>Дата выдачи</td>
+                            <td rowspan="2"><span>20.11.2020</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>KODIROV RAKHMATILLAKHON</span></td>
+                            <td><span>FA</span> <span>1301427</span></td>
+                            <td><span>20.11.2020</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>KODIROV RAKHMATILLAKHON</span></td>
+                            <td><span>FA</span> <span>1301427</span></td>
+                            <td><span>21.02.2002</span></td>
+                            <td rowspan="4"><b>SIGNATURE OF INSURER</b>/<br/>Подпись представителя Страховщика</td>
+                            <td rowspan="4"></td>
+                        </tr>
+                        <tr>
+                            <td><b>PURPOSE OF THE TRIP/</b>Цель поездки</td>
+                            <td colspan="2"><span></span>other</td>
+                        </tr>
+                        <tr>
+                            <td><b>INSURANCE PROGRAM/</b>Программа страхования</td>
+                            <td colspan="2"><b>SUM INSURED/</b>Сумма покрытия</td>   
+                        </tr>
+                        <tr>
+                            <td><span>Standart</span></td>
+                            <td colspan="2"><span>60 000€ (Зона 1)</span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><b>HOST COUNTRY/</b>Страна поездки</td>
+                            <td colspan="2"><b>INSURANCE PREMIUM/</b>Страховая премия</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><span>LATVIA, SCHENGEN</span></td>
+                            <td colspan="2"><span>438 747,00</span></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" colspan="3" id="specific"><b>I hereby declare that the Insured persons are healthy, have no medical contraindications to the trip, do not currently undergo an intensive care course and do
+                                not need urgent medical treatment. I have agree with the insurance Rules. Insurance Rules was reseived./</b>Настоящим заявляю, что Застрахованные лица
+                                здоровы, не имеют медицинских противопоказаний для поездки, не проходят в настоящее время курс интенсивной терапии и не нуждаются в срочном
+                                медицинском лечении. С Правилами страхования ознакомлен и согласен. Полис и Правила страхования получил</td>
+                                <td colspan="2"><b>SIGNATURE POLICY HOLDER/</b>Подпись Страхователя</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 9px;"></td>
+                        </tr>
+                         <tr>
+                            <td colspan="5" id="last_spec"><b>EXPENSES LESS THAN 30 (THIRTY) EURO NOT REIMBURSED(CONDITIONAL FRANCHISE)!/</b>РАСХОДЫ МЕНЕЕ 30 (тридцати) ЕВРО НЕ ВОЗМЕЩАЮТСЯ (УСЛОВНАЯ ФРАНШИЗА)!</td>
+                         </tr>   
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>"""
+    }
 }

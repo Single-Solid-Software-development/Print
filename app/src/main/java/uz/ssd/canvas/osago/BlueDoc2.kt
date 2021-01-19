@@ -23,6 +23,7 @@ class BlueDoc2 : BaseActivity() {
         val settings: WebSettings = webView.settings
         settings.userAgentString = DESKTOP_USER_AGENT
 
+        toolbar.setTitle("BLUE Doc 2")
         btn.setOnClickListener { createWebPagePrint(webView) }
         btn2.setOnClickListener { download() }
         btn3.setOnClickListener {

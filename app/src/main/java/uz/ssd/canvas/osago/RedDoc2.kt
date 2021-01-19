@@ -1,11 +1,13 @@
 package uz.ssd.canvas.osago
 
+import android.content.Intent
 import android.os.Bundle
 import android.webkit.WebSettings
 import kotlinx.android.synthetic.main.activity_main.*
 import uz.ssd.canvas.Html
 import uz.ssd.canvas.Html.DESKTOP_USER_AGENT
 import uz.ssd.canvas.R
+import uz.ssd.canvas.Travel
 import uz.ssd.canvas.base.BaseActivity
 import uz.ssd.canvas.osago.data.Relative
 
@@ -21,9 +23,13 @@ class RedDoc2 : BaseActivity() {
         val settings: WebSettings = webView.settings
         settings.userAgentString = DESKTOP_USER_AGENT
 
+        toolbar.setTitle("Red Doc 2")
         btn.setOnClickListener { createWebPagePrint(webView) }
         btn2.setOnClickListener { download() }
-
+        btn3.text = "Travel"
+        btn3.setOnClickListener {
+            startActivity(Intent(this, Travel::class.java))
+        }
     }
 
     private fun download() {

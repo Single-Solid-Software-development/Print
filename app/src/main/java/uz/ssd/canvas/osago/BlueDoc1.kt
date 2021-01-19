@@ -27,6 +27,7 @@ class BlueDoc1 : BaseActivity() {
         settings.userAgentString = DESKTOP_USER_AGENT
 //        download()
 //        createWebPagePrint(webView)
+        toolbar.setTitle("BLUE Doc 1")
         btn.setOnClickListener { createWebPagePrint(webView) }
         btn2.setOnClickListener { download() }
         btn3.setOnClickListener {
