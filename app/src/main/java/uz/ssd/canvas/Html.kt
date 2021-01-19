@@ -371,19 +371,19 @@ object Html {
       <td class="relative_level"> ${relative.r5Type} </td>
     </tr>
     <tr class="body_space"></tr>
-    <tr class="insurer_sum">
+     <tr class="insurer_sum position">
       <td class="with_numbers"> ${relative.reward1Digit} </td>
       <td class="with_words">${relative.reward1Alpha}</td>
     </tr>
-    <tr class="insurer_award">
+        <tr class="insurer_award position">
        <td class="with_numbers"> ${relative.reward2Digit} </td>
       <td class="with_words">${relative.reward2Alpha}</td>
     </tr>
-    <tr class="discount_award">
+        <tr class="discount_award position">
       <td class="with_numbers"> ${relative.reward3Digit} </td>
       <td class="with_words">${relative.reward3Alpha}</td>
     </tr>
-    <tr class="paid_award">
+      <tr class="paid_award position">
       <td class="with_numbers"> ${relative.reward4Digit} </td>
       <td class="with_words">${relative.reward4Alpha}</td>
     </tr>
